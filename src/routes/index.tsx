@@ -1,24 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
+import landingHtml from "@/content/landing.html?raw";
+import landingCss from "@/content/landing.css?raw";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Backcourt for operators — Every quarter is a new market" },
+      {
+        name: "description",
+        content:
+          "Backcourt Manager: a real-money basketball manager game with live quarter-by-quarter betting for casinos and sportsbooks, distributed through Hub88.",
+      },
+      { property: "og:title", content: "Backcourt for operators" },
+      {
+        property: "og:description",
+        content: "A basketball manager game where every quarter is a new market. For licensed operators via Hub88.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Bungee&family=DM+Mono:wght@400;500&family=Rubik:wght@400;500;700;800&display=swap",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
+    <>
+      <style dangerouslySetInnerHTML={{ __html: landingCss }} />
+      <div
+        dangerouslySetInnerHTML={{ __html: landingHtml }}
+        onSubmit={(e) => e.preventDefault()}
       />
-    </div>
+    </>
   );
 }
