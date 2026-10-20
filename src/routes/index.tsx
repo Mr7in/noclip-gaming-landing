@@ -17,9 +17,31 @@ export const Route = createFileRoute("/")({
         content: "A basketball manager game where every quarter is a new market. For licensed operators via Hub88.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://backcourt.lovable.app/" },
+      { property: "og:image", content: "https://backcourt.lovable.app/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Backcourt for operators" },
+      { name: "twitter:description", content: "A basketball manager game where every quarter is a new market. For licensed operators via Hub88." },
+      { name: "twitter:image", content: "https://backcourt.lovable.app/og-image.jpg" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "VideoGame",
+          name: "Backcourt Manager",
+          description: "Real-money basketball management game with live quarter-by-quarter betting for licensed casinos and sportsbooks.",
+          url: "https://backcourt.lovable.app/",
+          image: "https://backcourt.lovable.app/og-image.jpg",
+          genre: ["Sports", "Management"],
+        }),
+      },
     ],
     links: [
+      { rel: "canonical", href: "https://backcourt.lovable.app/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
