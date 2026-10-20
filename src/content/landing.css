@@ -15,3 +15,24 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 input,select{font:inherit}
 @media (prefers-reduced-motion:reduce){.btn{transition:none}}
 
+html{scroll-padding-top:72px}
+@media (max-width:640px){
+  .topnav a:not(.btn){display:none!important}
+  .topnav .btn{font-size:12px!important;min-height:38px!important;padding:8px 12px!important}
+  header .wrap{flex-wrap:nowrap!important;padding-block:10px!important}
+  header svg{width:30px;height:30px}
+  header span{font-size:18px!important}
+  section.wrap,section .wrap{padding-block:48px!important}
+  section.wrap[style*="padding-block:0"]{padding-top:0!important}
+  .hero{padding-block:36px 40px!important;gap:32px!important}
+  .hero h1{font-size:44px!important}
+  .hero p{font-size:17px!important}
+  .hero .btn,.hero .btn2{flex:1 1 100%}
+  h2{font-size:28px!important}
+  .loop{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px!important;margin-inline:-20px;padding:0 20px 8px;scrollbar-width:none}
+  .loop::-webkit-scrollbar{display:none}
+  .loop>figure{flex:0 0 68%;scroll-snap-align:center}
+  .phone{max-width:250px;margin-inline:auto}
+  div[style*="flex:0 1 300px"],div[style*="flex:0 1 230px"]{flex-basis:auto!important;width:72%;max-width:250px}
+  form{padding:20px!important}
+}
