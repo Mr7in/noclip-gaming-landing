@@ -1,0 +1,17 @@
+
+
+body{margin:0;background:#1b130e}
+a{color:#ff9442}a:hover{color:#ffb070}
+*{box-sizing:border-box}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.phone{background:#0c0806;border:1px solid #4a3727;border-radius:34px;padding:7px;box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.03) inset}
+.phone img{display:block;width:100%;height:auto;border-radius:27px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 24px;border-radius:14px;background:#ff7a1a;color:#2b1203;font-family:Bungee,Impact,"Arial Black",sans-serif;font-size:17px;letter-spacing:.02em;text-decoration:none;box-shadow:0 5px 0 #b44d06;transition:transform .08s,box-shadow .08s}
+.btn:hover{color:#2b1203;background:#ff8a33}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #b44d06}
+.btn2{display:inline-flex;align-items:center;min-height:48px;padding:12px 20px;border-radius:12px;border:1px solid #4a3727;background:#36271c;color:#f4ecdf;font-weight:700;text-decoration:none}
+.btn2:hover{color:#f4ecdf;background:#40301f}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #ffd23f;outline-offset:3px}
+input,select{font:inherit}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+
