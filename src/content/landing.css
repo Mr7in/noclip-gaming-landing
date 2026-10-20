@@ -35,4 +35,8 @@ html{scroll-padding-top:72px}
   .phone{max-width:250px;margin-inline:auto}
   div[style*="flex:0 1 300px"],div[style*="flex:0 1 230px"]{flex-basis:auto!important;width:72%;max-width:250px}
   form{padding:20px!important}
+  .stats{grid-template-columns:1fr 1fr!important}
+  .stats>div{padding:14px!important}
+  .stats span:first-child{font-size:30px!important}
+  .stats span:last-child{font-size:13px!important}
 }
