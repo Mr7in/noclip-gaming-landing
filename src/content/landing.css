@@ -39,4 +39,6 @@ html{scroll-padding-top:72px}
   .stats>div{padding:14px!important}
   .stats span:first-child{font-size:30px!important}
   .stats span:last-child{font-size:13px!important}
+  .flow{flex-direction:column!important}
+  .flow>div[aria-hidden="true"]{transform:rotate(90deg);padding:2px 0}
 }
