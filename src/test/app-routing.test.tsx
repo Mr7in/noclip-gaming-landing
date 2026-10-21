@@ -21,15 +21,14 @@ describe("App routing", () => {
     expect(router.matchRoutes(path).at(-1)?.routeId).toBe("/play");
   });
 
-  it("does not catch the static /play/index.html URL", () => {
-    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
-    expect(router.matchRoutes("/play/index.html").at(-1)?.routeId).not.toBe("/play");
+  it("does not redirect the static /play/index.html URL", () => {
+    expect(redirectToGame("/play/index.html")).toBeUndefined();
   });
 
   it("redirects to the explicit static game URL with HTTP 301", () => {
     expect.assertions(3);
     try {
-      redirectToGame();
+      redirectToGame("/play");
     } catch (error) {
       expect(error).toBeInstanceOf(Response);
       expect((error as Response).status).toBe(301);
