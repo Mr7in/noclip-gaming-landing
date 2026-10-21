@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Serve the unmodified game as the explicit public static asset `/play/index.html`; the exact `/play` TanStack route redirects during SSR so both pretty URL variants work without relying on directory-index hosting.
+- Keep the supplied landing page as raw HTML/CSS, with the demo panel using a two-column grid; this preserves the imported page while preventing desktop wrapping.
