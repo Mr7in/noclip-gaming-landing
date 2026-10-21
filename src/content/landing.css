@@ -16,6 +16,12 @@ input,select{font:inherit}
 @media (prefers-reduced-motion:reduce){.btn{transition:none}}
 
 html{scroll-padding-top:72px}
+.game-phone{background:#0c0806;border:1px solid #4a3727;border-radius:34px;padding:7px;box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.03) inset}
+.game-phone iframe{display:block;width:390px;height:780px;max-width:calc(100vw - 54px);border:0;border-radius:27px;background:#0c0806}
+@media (max-width:600px){
+  .game-embed{display:none!important}
+  .game-fs{display:inline-flex!important}
+}
 @media (max-width:640px){
   .topnav a:not(.btn){display:none!important}
   .topnav .btn{font-size:12px!important;min-height:38px!important;padding:8px 12px!important}
