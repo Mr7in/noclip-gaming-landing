@@ -326,16 +326,14 @@
 <h2 style="margin:0;font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:800;text-wrap:balance">Through Hub88, nothing new to build.</h2>
 <p style="margin:0;font-size:17px;color:#e7dccb;max-width:65ch">Backcourt Manager plugs into Hub88's standard games API. If your casino already takes content from Hub88, the game uses your existing player session and balance. No new wallet, no separate account for the player.</p>
 </div>
-<div aria-label="How a match flows through Hub88" style="display:flex;flex-wrap:wrap;align-items:stretch;gap:12px">
+<div aria-label="How a match flows" style="display:flex;flex-wrap:wrap;align-items:stretch;gap:12px">
 <div style="flex:1 1 220px;min-width:0;background:#1b130e;border:1px solid #4a3727;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b8a690">Your casino</span><span style="font-weight:800;font-size:18px">Lobby, player, wallet</span><span style="font-size:14px;color:#d7cab6">Player opens Backcourt Manager from your lobby tile.</span></div>
-<div aria-hidden="true" style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-family:Bungee,Impact,sans-serif;font-size:24px;color:#ff7a1a;padding:0 4px">→</div>
-<div style="flex:1 1 220px;min-width:0;background:#1b130e;border:1px solid #4a3727;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b8a690">Hub88</span><span style="font-weight:800;font-size:18px">Launch, catalogue, round history</span><span style="font-size:14px;color:#d7cab6">Signed requests both ways, one integration you already have.</span></div>
 <div aria-hidden="true" style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-family:Bungee,Impact,sans-serif;font-size:24px;color:#ff7a1a;padding:0 4px">→</div>
 <div style="flex:1 1 220px;min-width:0;background:#36271c;border:1px solid #ff7a1a;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ff9442">Backcourt RGS</span><span style="font-weight:800;font-size:18px">Match engine, odds, settlement</span><span style="font-size:14px;color:#d7cab6">Simulates the match, prices markets, books every bet to your wallet.</span></div>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:24px">
 <div style="flex:1 1 420px;min-width:0;background:#120c08;border:1px solid #4a3727;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px">
-<h3 style="margin:0;font-size:17px;font-weight:800">One match is one Hub88 round</h3>
+<h3 style="margin:0;font-size:17px;font-weight:800">One match is one round</h3>
 <div style="overflow-x:auto"><pre style="margin:0;font-family:'DM Mono',ui-monospace,monospace;font-size:13px;line-height:1.7;color:#e7dccb">round  bc-8807c37            <span style="color:#b8a690"># one per match</span>
 ├─ bet   tip-off   €5.00    <span style="color:#b8a690"># /transaction/bet</span>
 ├─ bet   end Q1    €2.00
@@ -346,7 +344,7 @@
 <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:12px">
 <div style="border:1px solid #4a3727;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:4px"><span style="font-weight:700">Demo mode</span><span style="font-size:14px;color:#d7cab6">Free-play launch for your lobby and marketing, no real-money balance needed.</span></div>
 <div style="border:1px solid #4a3727;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:4px"><span style="font-weight:700">Mobile-first iframe</span><span style="font-size:14px;color:#d7cab6">Portrait, one-handed, safe-area aware. Sound off by default in your lobby.</span></div>
-<div style="border:1px solid #4a3727;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:4px"><span style="font-weight:700">Player state hosted by us</span><span style="font-size:14px;color:#d7cab6">Squads and progression keyed to the Hub88 user and your operator ID.</span></div>
+<div style="border:1px solid #4a3727;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:4px"><span style="font-weight:700">Player state hosted by us</span><span style="font-size:14px;color:#d7cab6">Squads and progression keyed to your player ID and your operator ID.</span></div>
 </div>
 </div>
 </div>
@@ -362,7 +360,7 @@
 <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px">
 <li style="border:1px solid #3ddc84;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#3ddc84">Done</span><span style="font-weight:800">Match engine and pricing</span><span style="font-size:14px;color:#d7cab6">Simulation, Monte Carlo odds, settlement, RTP verification</span></li>
 <li style="border:1px solid #3ddc84;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#3ddc84">Done</span><span style="font-weight:800">Playable demo</span><span style="font-size:14px;color:#d7cab6">Full loop with live quarter betting and the progression meta</span></li>
-<li style="border:1px solid #ffd23f;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ffd23f">In build</span><span style="font-weight:800">RGS and Hub88 integration</span><span style="font-size:14px;color:#d7cab6">Wallet client, signing, round ledger, staging tests</span></li>
+<li style="border:1px solid #ffd23f;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ffd23f">In build</span><span style="font-weight:800">RGS and operator integration</span><span style="font-size:14px;color:#d7cab6">Wallet client, signing, round ledger, staging tests</span></li>
 <li style="border:1px solid #4a3727;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b8a690">Next</span><span style="font-weight:800">Certification</span><span style="font-size:14px;color:#d7cab6">RNG and game maths with an accredited lab</span></li>
 </ol>
 </section>
@@ -372,20 +370,17 @@
 <div class="wrap" style="display:flex;flex-wrap:wrap;gap:40px;padding-block:80px;align-items:flex-start">
 <div style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:16px">
 <h2 style="margin:0;font-family:Bungee,Impact,'Arial Black',sans-serif;font-weight:400;font-size:clamp(32px,4.4vw,52px);line-height:1;text-wrap:balance">Play it before you list it.</h2>
-<p style="margin:0;font-size:18px;line-height:1.55;max-width:44ch">Get the playable demo, the math summary and Hub88 listing details. We reply within two working days.</p>
+<p style="margin:0;font-size:18px;line-height:1.55;max-width:44ch">Book a time and we'll walk you through the playable demo, the math summary and what listing looks like in your lobby.</p>
 <p style="margin:0;font-size:15px;font-weight:500">Or write to <span style="font-weight:800;user-select:all">[YOUR EMAIL]</span></p>
 <a href="https://claude.ai/artifact/751f32QZT7ryo7QRaqNQ2R" target="_blank" rel="noopener" style="align-self:flex-start;color:#2b1203;font-weight:800;text-decoration:underline;text-underline-offset:4px;padding:8px 0">Play the demo now</a>
 </div>
-<form aria-label="Request a demo" style="flex:1 1 420px;min-width:0;background:#1b130e;color:#f4ecdf;border-radius:18px;padding:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
-<div style="display:flex;flex-direction:column;gap:6px"><label for="f-name" style="font-size:13px;font-weight:700">Name</label><input id="f-name" type="text" autocomplete="name" placeholder="Jane Doe" style="min-height:46px;padding:10px 14px;border-radius:12px;border:1px solid #4a3727;background:#36271c;color:#f4ecdf"></div>
-<div style="display:flex;flex-direction:column;gap:6px"><label for="f-company" style="font-size:13px;font-weight:700">Company</label><input id="f-company" type="text" autocomplete="organization" placeholder="Casino or sportsbook brand" style="min-height:46px;padding:10px 14px;border-radius:12px;border:1px solid #4a3727;background:#36271c;color:#f4ecdf"></div>
-<div style="display:flex;flex-direction:column;gap:6px"><label for="f-email" style="font-size:13px;font-weight:700">Work email</label><input id="f-email" type="email" autocomplete="email" placeholder="you@brand.com" style="min-height:46px;padding:10px 14px;border-radius:12px;border:1px solid #4a3727;background:#36271c;color:#f4ecdf"></div>
-<div style="display:flex;flex-direction:column;gap:6px"><label for="f-hub" style="font-size:13px;font-weight:700">Already on Hub88?</label><select id="f-hub" style="min-height:46px;padding:10px 14px;border-radius:12px;border:1px solid #4a3727;background:#36271c;color:#f4ecdf"><option>Yes</option><option>No</option><option>Not sure</option></select></div>
-<div style="grid-column:1/-1;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
-<button type="button" class="btn" style="border:0;cursor:pointer">Request the demo</button>
+<div aria-label="Book a demo" style="flex:1 1 420px;min-width:0;background:#1b130e;color:#f4ecdf;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:14px">
+<span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ff9442">Book a demo</span>
+<span style="font-weight:800;font-size:22px;line-height:1.2">Pick a time that works for you.</span>
+<span style="font-size:15px;color:#d7cab6">The booking page shows live availability. Bring your questions on markets, limits, maths and certification.</span>
+<a href="https://calendar.app.google/L7rUztg9ASr9erwa7" target="_blank" rel="noopener" class="btn" style="align-self:flex-start">Book a demo</a>
 <span style="font-size:13px;color:#b8a690">B2B enquiries only.</span>
 </div>
-</form>
 </div>
 </section>
 
@@ -397,7 +392,7 @@
 <span style="font-family:Bungee,Impact,sans-serif;font-size:16px">BACKCOURT</span>
 <span style="font-size:13px;color:#b8a690">© 2026 [COMPANY NAME]</span>
 </div>
-<p style="margin:0;font-size:13px;color:#b8a690;max-width:60ch">18+ · Play responsibly. Backcourt Manager is a real-money game for licensed operators. Hub88 is a trademark of its owner and is named here as the distribution route.</p>
+<p style="margin:0;font-size:13px;color:#b8a690;max-width:60ch">18+ · Play responsibly. Backcourt Manager is a real-money game for licensed operators.</p>
 </div>
 </footer>
 
