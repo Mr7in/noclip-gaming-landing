@@ -5,22 +5,8 @@
 //     React/TanStack dedupe, error logger plugins, and sandbox detection (port/host/strictPort).
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
-
-// Dev-only: rewrite /play and /play/ to the static file in public/play/index.html so
-// TanStack Router never intercepts the game URL. In production, Cloudflare static
-// assets serve the directory index natively.
-const servePlayIndex = () => ({
-  name: "serve-play-index",
-  configureServer(server: import("vite").ViteDevServer) {
-    server.middlewares.use((req, _res, next) => {
-      const url = (req.url || "").split("?")[0];
-      if (url === "/play" || url === "/play/") {
-        req.url = "/play/index.html";
-      }
-      next();
-    });
-  },
-});
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 
 export default defineConfig({
   tanstackStart: {
@@ -29,6 +15,19 @@ export default defineConfig({
     server: { entry: "server" },
   },
   vite: {
-    plugins: [servePlayIndex()],
+    plugins: [{
+      name: "verify-static-game-output",
+      apply: "build",
+      closeBundle() {
+        if (this.environment.name !== "client") return;
+        const asset = resolve(this.environment.config.build.outDir, "play/index.html");
+        const original = readFileSync(resolve("public/play/index.html"));
+        const emitted = readFileSync(asset);
+        if (!original.equals(emitted)) {
+          throw new Error("The emitted static game differs from public/play/index.html");
+        }
+        console.log(`[static game verified] ${asset} (${emitted.length} bytes, unmodified)`);
+      },
+    }],
   },
 });
