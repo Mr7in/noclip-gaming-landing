@@ -19,7 +19,7 @@ html{scroll-padding-top:72px}
 .game-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,406px);align-items:center;gap:48px}
 .game-embed{min-width:0;width:100%;justify-self:end}
 .game-phone{background:#0c0806;border:1px solid #4a3727;border-radius:34px;padding:7px;box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.03) inset}
-.game-phone img{display:block;width:100%;height:auto;aspect-ratio:1 / 2;border:0;border-radius:27px;background:#0c0806}
+.game-phone img{display:block;width:100%;height:auto;aspect-ratio:433 / 879;border:0;border-radius:27px;background:#0c0806}
 @media (min-width:600px) and (max-width:900px){
   .game-panel{grid-template-columns:minmax(0,1fr) minmax(0,45%);gap:24px}
 }
