@@ -5,7 +5,7 @@ import landingCss from "@/content/landing.css?raw";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Backcourt for operators — Every quarter is a new market" },
+      { title: "Backcourt for operators — The basketball game your players come back to" },
       {
         name: "description",
         content:
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Backcourt for operators" },
       {
         property: "og:description",
-        content: "A basketball manager game where every quarter is a new market. Live quarter betting for licensed casinos and sportsbooks.",
+        content: "A basketball manager game with live betting built in. Matches in minutes, up to four betting windows, and a meta that brings players back.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://backcourt.fyi/" },
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Backcourt for operators" },
-      { name: "twitter:description", content: "A basketball manager game where every quarter is a new market. Live quarter betting for licensed casinos and sportsbooks." },
+      { name: "twitter:description", content: "A basketball manager game with live betting built in. Matches in minutes, up to four betting windows, and a meta that brings players back." },
       { name: "twitter:image", content: "https://backcourt.fyi/og-image.jpg" },
     ],
     scripts: [
