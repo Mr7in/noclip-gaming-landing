@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://backcourt.lovable.app/sitemap.xml
+Sitemap: https://backcourt.fyi/sitemap.xml
