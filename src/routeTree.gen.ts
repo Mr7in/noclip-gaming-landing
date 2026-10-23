@@ -11,7 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PlayRouteImport } from './routes/play'
-import { Route as PlayIndexHtmlRouteImport } from './routes/play/index.html'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,39 +22,31 @@ const PlayRoute = PlayRouteImport.update({
   path: '/play',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PlayIndexHtmlRoute = PlayIndexHtmlRouteImport.update({
-  id: '/index/html',
-  path: '/index/html',
-  getParentRoute: () => PlayRoute,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/play': typeof PlayRouteWithChildren
-  '/play/index/html': typeof PlayIndexHtmlRoute
+  '/play': typeof PlayRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/play': typeof PlayRouteWithChildren
-  '/play/index/html': typeof PlayIndexHtmlRoute
+  '/play': typeof PlayRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/play': typeof PlayRouteWithChildren
-  '/play/index/html': typeof PlayIndexHtmlRoute
+  '/play': typeof PlayRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/play' | '/play/index/html'
+  fullPaths: '/' | '/play'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/play' | '/play/index/html'
-  id: '__root__' | '/' | '/play' | '/play/index/html'
+  to: '/' | '/play'
+  id: '__root__' | '/' | '/play'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  PlayRoute: typeof PlayRouteWithChildren
+  PlayRoute: typeof PlayRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -74,29 +65,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlayRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/play/index/html': {
-      id: '/play/index/html'
-      path: '/index/html'
-      fullPath: '/play/index/html'
-      preLoaderRoute: typeof PlayIndexHtmlRouteImport
-      parentRoute: typeof PlayRoute
-    }
   }
 }
 
-interface PlayRouteChildren {
-  PlayIndexHtmlRoute: typeof PlayIndexHtmlRoute
-}
-
-const PlayRouteChildren: PlayRouteChildren = {
-  PlayIndexHtmlRoute: PlayIndexHtmlRoute,
-}
-
-const PlayRouteWithChildren = PlayRoute._addFileChildren(PlayRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  PlayRoute: PlayRouteWithChildren,
+  PlayRoute: PlayRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

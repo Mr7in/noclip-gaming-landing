@@ -2,6 +2,17 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { DEMO_APP_URL } from "@/routes/play";
+
+// /play and /play/ are forwarded by the /play route. The old static file address
+// never reaches that route, so it has to be answered here, before the app runs.
+const MOVED_GAME_PATHS = new Set(["/play/index.html"]);
+
+export function forwardedGameRequest(request: Request): Response | undefined {
+  const { pathname } = new URL(request.url);
+  if (!MOVED_GAME_PATHS.has(pathname)) return undefined;
+  return new Response(null, { status: 301, headers: { Location: DEMO_APP_URL } });
+}
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -46,6 +57,9 @@ function isH3SwallowedErrorBody(body: string): boolean {
 
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    const forwarded = forwardedGameRequest(request);
+    if (forwarded) return forwarded;
+
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);

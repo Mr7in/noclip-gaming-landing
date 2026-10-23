@@ -16,20 +16,9 @@ describe("App routing", () => {
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
 
-  it.each(["/play", "/play/", "/play/index.html"])("matches the exact game redirect for %s", (path) => {
+  it.each(["/play", "/play/"])("matches the exact game redirect for %s", (path) => {
     const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
     expect(router.matchRoutes(path).at(-1)?.routeId).toBe("/play");
-  });
-
-  it("forwards old game links under /play to the hosted demo app", () => {
-    expect.assertions(3);
-    try {
-      redirectToGame("/play/index.html");
-    } catch (error) {
-      expect(error).toBeInstanceOf(Response);
-      expect((error as Response).status).toBe(301);
-      expect((error as Response).headers.get("Location")).toBe(DEMO_APP_URL);
-    }
   });
 
   it("forwards the game URLs to the hosted demo app with HTTP 301", () => {
@@ -41,5 +30,10 @@ describe("App routing", () => {
       expect((error as Response).status).toBe(301);
       expect((error as Response).headers.get("Location")).toBe(DEMO_APP_URL);
     }
+  });
+
+  it("leaves paths outside /play alone", () => {
+    expect(redirectToGame("/")).toBeUndefined();
+    expect(redirectToGame("/pricing")).toBeUndefined();
   });
 });
