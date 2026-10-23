@@ -15,14 +15,15 @@ export function redirectToGame(pathname: string) {
   throw redirect({ href: DEMO_APP_URL, statusCode: 301 });
 }
 
-// Only the forwarded URLs redirect; anything else under /play is a real 404.
+// The handler answers the request directly during SSR, so the redirect is a real
+// HTTP 301 before any HTML renders. beforeLoad covers client-side navigations.
 // beforeLoad runs during SSR, producing an HTTP redirect before rendering.
 export const Route = createFileRoute("/play")({
   server: {
     handlers: {
       GET: ({ request }) => {
         const pathname = new URL(request.url).pathname;
-        if (!GAME_PATHS.has(pathname)) {
+        if (!isGamePath(pathname)) {
           return new Response("Not found", { status: 404 });
         }
         return new Response(null, {

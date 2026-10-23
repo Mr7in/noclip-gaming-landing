@@ -21,8 +21,15 @@ describe("App routing", () => {
     expect(router.matchRoutes(path).at(-1)?.routeId).toBe("/play");
   });
 
-  it("does not redirect unknown children of /play", () => {
-    expect(redirectToGame("/play/anything-else")).toBeUndefined();
+  it("forwards old game links under /play to the hosted demo app", () => {
+    expect.assertions(3);
+    try {
+      redirectToGame("/play/index.html");
+    } catch (error) {
+      expect(error).toBeInstanceOf(Response);
+      expect((error as Response).status).toBe(301);
+      expect((error as Response).headers.get("Location")).toBe(DEMO_APP_URL);
+    }
   });
 
   it("forwards the game URLs to the hosted demo app with HTTP 301", () => {
