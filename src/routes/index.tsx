@@ -9,12 +9,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Backcourt Manager: a real-money basketball manager game with live quarter-by-quarter betting for casinos and sportsbooks.",
+          "Backcourt is a basketball manager game with live betting built in. A new casino game category built for retention: matches in minutes, four betting windows, and daily, weekly and season loops that bring players back.",
       },
       { property: "og:title", content: "Backcourt for operators" },
       {
         property: "og:description",
-        content: "A basketball manager game with live betting built in. Matches in minutes, up to four betting windows, and a meta that brings players back.",
+        content: "Backcourt is a basketball manager game with live betting built in. A new casino game category built for retention: matches in minutes, four betting windows, and daily, weekly and season loops that bring players back.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://backcourt.fyi/" },
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Backcourt for operators" },
-      { name: "twitter:description", content: "A basketball manager game with live betting built in. Matches in minutes, up to four betting windows, and a meta that brings players back." },
+      { name: "twitter:description", content: "Backcourt is a basketball manager game with live betting built in. A new casino game category built for retention: matches in minutes, four betting windows, and daily, weekly and season loops that bring players back." },
       { name: "twitter:image", content: "https://backcourt.fyi/og-image.jpg" },
     ],
     scripts: [

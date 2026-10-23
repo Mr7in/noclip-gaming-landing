@@ -1,152 +1,334 @@
 
-<div style="width:100%;background:#1b130e;color:#f4ecdf;font-family:Rubik,'Segoe UI',system-ui,sans-serif;font-size:16px;line-height:1.5;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.02) 0 2px,transparent 2px 46px),radial-gradient(ellipse at 50% -8%,rgba(255,122,26,.20),transparent 55%);overflow-x:hidden" data-canvas-width="1440" data-canvas-height="8000" data-document-role="page" data-label="Operator landing page">
+<div class="bc">
 
 <!-- NAV -->
-<header style="position:sticky;top:0;z-index:20;background:rgba(27,19,14,.92);backdrop-filter:blur(10px);border-bottom:1px solid #4a3727">
-<div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-block:14px">
-<a href="#top" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#f4ecdf" aria-label="Backcourt home">
-<svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#ff7a1a"></rect><circle cx="50" cy="40" r="18" fill="#1b130e"></circle><path d="M41 48H59L71 100H29Z" fill="#1b130e"></path></svg>
-<span style="font-family:Bungee,Impact,sans-serif;font-size:22px;letter-spacing:.03em">BACKCOURT</span>
+<header>
+<div class="wrap navrow">
+<a class="logo" href="#top" aria-label="Backcourt home">
+<svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#ff7a1a"/><circle cx="50" cy="40" r="18" fill="#1b130e"/><path d="M41 48H59L71 100H29Z" fill="#1b130e"/></svg>
+<span>BACKCOURT</span>
 </a>
-<nav class="topnav" aria-label="Sections" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 22px;font-size:15px;font-weight:500">
-<a href="#game" style="color:#b8a690;text-decoration:none;padding:8px 0">The game</a>
-<a href="#retention" style="color:#b8a690;text-decoration:none;padding:8px 0">Retention</a>
-<a href="#maths" style="color:#b8a690;text-decoration:none;padding:8px 0">Maths</a>
-<a href="#integration" style="color:#b8a690;text-decoration:none;padding:8px 0">Integration</a>
-<a href="/play/index.html" style="color:#f4ecdf;text-decoration:none;padding:8px 0;font-weight:700">Play the demo</a>
-<a href="https://calendar.app.google/L7rUztg9ASr9erwa7" target="_blank" rel="noopener" class="btn" style="font-size:14px;min-height:42px;padding:10px 16px;box-shadow:0 4px 0 #b44d06">Book a demo</a>
+<nav class="navlinks" aria-label="Sections">
+<a class="sec" href="#game">The game</a>
+<a class="sec" href="#retention">Retention</a>
+<a class="sec" href="#try">Why try it</a>
+<a class="sec" href="#page">Launch plan</a>
+<a class="play" href="https://backcourt.fyi/play/index.html" target="_blank" rel="noopener">Play the demo</a>
+<a class="btn" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3A7rvaqZ-fVO2oaZ9vKrMJ2l95s8OJRrVpG70i7G2ethCc_MwxlA0vo976-ABKIEil0Oylvsg7" target="_blank" rel="noopener">Book a demo</a>
 </nav>
 </div>
 </header>
 
 <!-- HERO -->
-<section id="top" class="wrap hero" style="display:flex;flex-wrap:wrap;align-items:center;gap:48px 56px;padding-block:72px 64px">
-<div style="flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:24px">
-<div style="display:flex;flex-wrap:wrap;gap:8px"><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2b1203;background:#ffd23f;padding:5px 10px;border-radius:999px">For casinos and sportsbooks</span></div>
-<h1 style="margin:0;font-family:Bungee,Impact,'Arial Black',sans-serif;font-weight:400;font-size:clamp(40px,5.6vw,68px);line-height:.98;letter-spacing:.005em;text-wrap:balance">The basketball game your players come back to.</h1>
-<p style="margin:0;font-size:19px;line-height:1.55;color:#e7dccb;max-width:580px"><strong style="color:#f4ecdf">Backcourt is a basketball manager game with live betting built in.</strong> Players build a squad, call the plays, and bet on matches that last minutes, not hours. The collection, the divisions and the season pass bring them back tomorrow. Your casino gets a new sports vertical that never runs out of fixtures.</p>
-<div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
-<a href="https://calendar.app.google/L7rUztg9ASr9erwa7" target="_blank" rel="noopener" class="btn">Book a demo</a>
-<a href="/play/index.html" class="btn2">Play the demo on your phone</a>
+<section id="top" class="wrap hero">
+<div class="herocopy">
+<div class="pillrow"><span class="pill">For casinos and sportsbooks</span><span class="pill ghost">A new casino game category</span></div>
+<h1>The basketball game your players <em>come back to.</em></h1>
+<p class="lead"><strong>Backcourt is a basketball manager game with live betting built in.</strong> Players build a squad, call the plays, and bet on matches that last minutes, not hours. The collection, the divisions and the season pass bring them back tomorrow. Your casino gets a new sports vertical that never runs out of fixtures.</p>
+<div class="ctas">
+<a class="btn" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3A7rvaqZ-fVO2oaZ9vKrMJ2l95s8OJRrVpG70i7G2ethCc_MwxlA0vo976-ABKIEil0Oylvsg7" target="_blank" rel="noopener">Book a demo</a>
+<a class="btn2" href="https://backcourt.fyi/play/index.html" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Play the demo</a>
 </div>
 </div>
-<div aria-label="Backcourt Manager screens" style="flex:1 1 440px;min-width:0;display:flex;justify-content:center;align-items:flex-start;gap:0;padding-top:12px">
-<div class="phone" style="width:31%;max-width:220px;transform:rotate(-6deg) translate(18px,34px);z-index:1"><img src="/bc/8abae611-6d6c-4426-8e9d-9732b8557b2b.png" alt="Game plan screen: a coach's clipboard with offence and defence plays and a 73% win chance"></div>
-<div class="phone" style="width:36%;max-width:260px;z-index:2"><img src="/bc/28a2294a-a7f5-4f0a-bbcd-387acf419038.png" alt="Live match: top-down court, LED scoreboard and a bet tracker"></div>
-<div class="phone" style="width:31%;max-width:220px;transform:rotate(6deg) translate(-18px,34px);z-index:1"><img src="/bc/062f2e2f-1278-4e7b-90b7-f02b87413504.png" alt="Quarter break sheet: your bets, cash out offer and live markets at fresh odds"></div>
-</div>
-</section>
-
-<section class="wrap" aria-label="Key points" style="padding-block:8px 72px">
-<div class="stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
-<div style="background:#120c08;border:1px solid #4a3727;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Bungee,Impact,sans-serif;font-size:36px;line-height:1;color:#ffd23f;text-shadow:0 0 14px rgba(255,210,63,.3)">2–5 min</span><span style="font-size:14px;color:#e7dccb">Matches in 2 to 5 minutes, 24/7</span></div>
-<div style="background:#120c08;border:1px solid #4a3727;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Bungee,Impact,sans-serif;font-size:36px;line-height:1;color:#ffd23f;text-shadow:0 0 14px rgba(255,210,63,.3)">4</span><span style="font-size:14px;color:#e7dccb">Up to 4 betting windows per match</span></div>
-<div style="background:#120c08;border:1px solid #4a3727;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-family:Bungee,Impact,sans-serif;font-size:36px;line-height:1;color:#ffd23f;text-shadow:0 0 14px rgba(255,210,63,.3)">1 wallet</span><span style="font-size:14px;color:#e7dccb">A full progression meta that runs on your existing player session and balance</span></div>
+<div class="trio" aria-label="Backcourt screens">
+<div class="glow"></div>
+<div class="phone l"><img src="/bc/plan.webp" alt="Game plan: a coach's clipboard with plays, boosters and a live win chance" width="640" height="1376"></div>
+<div class="phone m"><img src="/bc/live.webp" alt="Live match: animated court, LED scoreboard and bet tracker" width="640" height="1376"></div>
+<div class="phone r"><img src="/bc/break.webp" alt="Quarter break: open bets with cash out and fresh live odds" width="640" height="1376"></div>
 </div>
 </section>
 
-<section class="alt"><div class="wrap" style="display:flex;flex-direction:column;gap:36px;padding-block:80px">
-<div class="head"><span class="eyebrow">The problem</span><h2 class="h2">Slots get played. Sports get followed. Neither gets both.</h2><p class="lead">Slot sessions are intense but shallow: nothing carries over to the next visit. Real sports have loyalty and rivalry, but the fixture list sets the schedule, and the off-season empties it.</p><p class="lead">Backcourt sits between the two. It has the depth of a sport a player follows and the always-on availability of a casino game. Every match counts toward something that is still there next week.</p></div>
-
-</div></section>
-
-<section id="game" class="wrap" style="display:flex;flex-direction:column;gap:36px;padding-block:88px">
-<div class="head"><span class="eyebrow">What it is</span><h2 class="h2">Fantasy manager meets live betting.</h2></div>
-<div class="grid"><div class="card"><h3>Build your team.</h3><p>Open packs, collect players from a 500-player league across 50 clubs, and pick a starting five. Chemistry between club, nation and play style rewards smart squad building, not just big pulls.</p></div><div class="card"><h3>Call the game.</h3><p>Choose an offence (Pace and space, Post-up, Pick and roll, Grind) and a defence (Man, Zone, Press, Switch). Tactics counter each other, and the AI coach adapts when it falls behind.</p></div><div class="card"><h3>Bet the match, then bet it again.</h3><p>Place bets before tip-off and at every quarter break: match winner, handicap, total points, captain's points and a bet builder. Change the game plan at the break and every market re-prices on the spot.</p></div><div class="card"><h3>Watch it play out.</h3><p>A live animated court shows every possession, with pause and speed controls.</p></div></div>
+<section class="wrap" aria-label="Key numbers">
+<div class="stats">
+<div class="stat"><b>2 to 5 min</b><span>per match, 24/7, no fixture list</span></div>
+<div class="stat"><b>4</b><span>betting windows in every match</span></div>
+<div class="stat"><b>4 loops</b><span>match, daily, weekly and season, each with a reason to return</span></div>
+<div class="stat"><b>0</b><span>new wallets, accounts or data feeds for you to run</span></div>
+</div>
 </section>
 
-<section class="alt"><div class="wrap" style="display:flex;flex-direction:column;gap:36px;padding-block:88px">
-<div class="head"><span class="eyebrow">How a match works</span><h2 class="h2">One match, four decisions, up to four betting windows.</h2></div>
-<ol class="steps"><li><b>Pre-game.</b>Set the lineup, pick up to two boosters, choose tactics. Odds are priced from thousands of simulations of this exact matchup.</li><li><b>Q1 break.</b>Read the box score, adjust the plan, bet again at live prices or cash out.</li><li><b>Q2 break.</b>Same again. The half-time decision is the biggest one.</li><li><b>Q3 break.</b>Last chance to adjust and bet before the final quarter.</li><li><b>Final buzzer.</b>Bets settle, rewards land, the season pass moves forward.</li></ol>
-<p class="lead" style="font-weight:700;color:#f4ecdf">Coaching and betting happen in the same moment. That moment is what makes a player stay for one more match.</p>
-<div class="loop" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px">
-<div class="phone"><img src="/bc/8abae611-6d6c-4426-8e9d-9732b8557b2b.png" alt="Game plan clipboard with offence and defence diagrams"></div>
-<div class="phone"><img src="/bc/6e558f40-47d1-46f0-a463-73dd8c687b6a.png" alt="Pre-game bets screen with match winner, handicap, total points and bet builder markets"></div>
-<div class="phone"><img src="/bc/28a2294a-a7f5-4f0a-bbcd-387acf419038.png" alt="Live court with ten players, LED scoreboard and play-by-play"></div>
-<div class="phone"><img src="/bc/062f2e2f-1278-4e7b-90b7-f02b87413504.png" alt="Quarter break sheet with bets, cash out and live markets"></div>
+<!-- INNOVATION -->
+<section class="alt" id="innovation">
+<div class="wrap pad stack">
+<div class="head"><span class="eyebrow">Innovation</span><h2 class="h2">Not a slot. Not a sportsbook. A new shelf in your lobby.</h2>
+<p class="lead">Slot sessions are intense but shallow: nothing carries over to the next visit. Real sports have loyalty and rivalry, but the fixture list sets the schedule and the off-season empties it. Backcourt takes the depth of a sport a player follows and the always-on availability of a casino game, and puts them in one title.</p></div>
+<div class="compare">
+<div class="col"><h3>Slots</h3><ul>
+<li><i class="yes">✓</i>Available any time</li><li><i class="yes">✓</i>Fast rounds</li>
+<li><i class="no">✕</i>Nothing carries over between sessions</li><li><i class="no">✕</i>No decisions beyond the stake</li><li><i class="no">✕</i>No reason to come back tomorrow</li></ul></div>
+<div class="col"><h3>Sportsbook</h3><ul>
+<li><i class="yes">✓</i>Loyalty and rivalry</li><li><i class="yes">✓</i>Live, in-play decisions</li>
+<li><i class="no">✕</i>The fixture list sets the schedule</li><li><i class="no">✕</i>Quiet nights and off-seasons</li><li><i class="no">✕</i>Data feeds and integrity risk</li></ul></div>
+<div class="col hot"><h3>Backcourt</h3><ul>
+<li><i class="yes">✓</i>A match whenever the player wants one</li><li><i class="yes">✓</i>Real decisions: lineup, tactics, boosters</li>
+<li><i class="yes">✓</i>Live betting at every quarter break</li><li><i class="yes">✓</i>A squad, a collection and a division that persist</li><li><i class="yes">✓</i>Fictional league: no feeds, no integrity risk</li></ul></div>
 </div>
-</div></section>
+</div>
+</section>
+
+<!-- THE GAME -->
+<section id="game" class="wrap pad stack">
+<div class="head"><span class="eyebrow">The game</span><h2 class="h2">Fantasy manager meets live betting.</h2>
+<p class="lead">Every match is a short story the player writes: who starts, how the team attacks, where the money goes, and what changes at half-time.</p></div>
+
+<div class="feat">
+<div class="ftxt"><span class="num">01</span><h3>Build your team.</h3>
+<p class="lead">Open packs, collect players from a 500-player league across 50 clubs, and pick a starting five. Chemistry between club, nation and play style rewards smart squad building, not just big pulls.</p>
+<ul><li>Four card tiers, from Common to Legendary</li><li>Live chemistry links on the court</li><li>AI auto-fill for casual players</li></ul></div>
+<div class="fimgs"><div class="phone"><img src="/bc/squad.webp" alt="Squad screen: five cards on the court with chemistry links" loading="lazy" width="640" height="1376"></div><div class="phone"><img src="/bc/tiers.webp" alt="Card tiers: Common, Rare, Epic and Legendary" loading="lazy" width="640" height="1376"></div></div>
+</div>
+
+<div class="feat flip">
+<div class="ftxt"><span class="num">02</span><h3>Call the game.</h3>
+<p class="lead">Choose an offence (Pace and space, Post-up, Pick and roll, Grind) and a defence (Man, Zone, Press, Switch). Tactics counter each other, and the AI coach adapts when it falls behind.</p>
+<ul><li>Win chance updates with every choice</li><li>Boosters for one match, priced into the odds</li><li>One-tap AI coach for players who just want to play</li></ul></div>
+<div class="fimgs"><div class="phone"><img src="/bc/plan.webp" alt="Game plan clipboard with offence and defence diagrams" loading="lazy" width="640" height="1376"></div><div class="phone"><img src="/bc/home.webp" alt="Home screen with next opponent, win chance and season pass" loading="lazy" width="640" height="1376"></div></div>
+</div>
+
+<div class="feat">
+<div class="ftxt"><span class="num">03</span><h3>Bet the match, then bet it again.</h3>
+<p class="lead">Place bets before tip-off and at every quarter break: match winner, handicap, total points, captain's points and a bet builder. Change the game plan at the break and every market re-prices on the spot.</p>
+<ul><li>Five markets, priced from thousands of simulations</li><li>Cash out at every break</li><li>Stakes from €0.10, configurable by the operator</li></ul></div>
+<div class="fimgs"><div class="phone"><img src="/bc/bets.webp" alt="Pre-game markets: winner, handicap, total, captain's points and bet builder" loading="lazy" width="640" height="1376"></div><div class="phone"><img src="/bc/slip.webp" alt="Bet slip with three singles and potential returns" loading="lazy" width="640" height="1376"></div></div>
+</div>
+
+<div class="feat flip">
+<div class="ftxt"><span class="num">04</span><h3>Watch it play out.</h3>
+<p class="lead">A live animated court shows every possession, with an LED scoreboard, play-by-play and a tracker that shows each open bet's live chance of landing. Pause, slow down or speed up to 4x.</p>
+<ul><li>Every bet's live chance on screen</li><li>Quarter breaks with box score and new odds</li><li>Sound design built for the arena feel</li></ul></div>
+<div class="fimgs"><div class="phone"><img src="/bc/live.webp" alt="Live court with ten players and the bet tracker" loading="lazy" width="640" height="1376"></div><div class="phone"><img src="/bc/break.webp" alt="End of Q1 sheet with cash out offers and trending markets" loading="lazy" width="640" height="1376"></div></div>
+</div>
+</section>
+
+<!-- MATCH FLOW -->
+<section class="alt">
+<div class="wrap pad stack">
+<div class="head"><span class="eyebrow">How a match works</span><h2 class="h2">One match. Four decisions. Up to four betting windows.</h2>
+<p class="lead">Coaching and betting happen in the same moment. That moment is what makes a player stay for one more match.</p></div>
+<div class="strip">
+<figure><div class="phone"><img src="/bc/plan.webp" alt="Game plan" loading="lazy" width="640" height="1376"></div><figcaption><b>Pre-game</b>Set the lineup, pick up to two boosters, choose tactics.</figcaption></figure>
+<figure><div class="phone"><img src="/bc/bets.webp" alt="Pre-game odds" loading="lazy" width="640" height="1376"></div><figcaption><b>First bets</b>Odds priced from simulations of this exact matchup.</figcaption></figure>
+<figure><div class="phone"><img src="/bc/live.webp" alt="Live match" loading="lazy" width="640" height="1376"></div><figcaption><b>Tip-off</b>Every possession on court, every bet tracked live.</figcaption></figure>
+<figure><div class="phone"><img src="/bc/break.webp" alt="Quarter break" loading="lazy" width="640" height="1376"></div><figcaption><b>Q1, Q2, Q3 breaks</b>Adjust the plan, bet at live prices or cash out.</figcaption></figure>
+<figure><div class="phone"><img src="/bc/result.webp" alt="Result screen with rewards" loading="lazy" width="640" height="1376"></div><figcaption><b>Final buzzer</b>Bets settle, rewards land, the season moves on.</figcaption></figure>
+</div>
+</div>
+</section>
+
+<!-- RETENTION -->
+<section id="retention" class="wrap pad stack">
+<div class="head"><span class="eyebrow">Retention</span><h2 class="h2">Built for day 30, not just day 1.</h2>
+<p class="lead">Most casino content is designed for the first session. Backcourt is designed around the loops that bring a player back, and every loop runs on gameplay, not on bonus spend.</p></div>
+
+<div class="loops">
+<div class="loop"><i class="ring"></i><span class="d">2 to 5 minutes</span><span class="t">Match</span><p>The result, the rewards, one more tweak to the squad.</p></div>
+<div class="loop"><i class="ring"></i><span class="d">10 to 20 minutes</span><span class="t">Daily</span><p>Daily streak, packs to open, cards to upgrade, double XP on the first match.</p></div>
+<div class="loop"><i class="ring"></i><span class="d">7 days</span><span class="t">Weekly</span><p>Promotion and relegation every Monday, fixture list, Revenge matches.</p></div>
+<div class="loop"><i class="ring"></i><span class="d">40 matches</span><span class="t">Season</span><p>Season pass with free and Pro tracks, exclusive styles, Legendary picks.</p></div>
+</div>
+
+<div class="gallery">
+<figure><div class="phone"><img src="/bc/pack-epic.webp" alt="Pack opening reveals an Epic card" loading="lazy" width="640" height="1376"></div><figcaption><b>Pack openings</b>Four tiers with real scarcity: only 50 copies of each Legendary. Duplicates turn into Shards, so no pack is wasted.</figcaption></figure>
+<figure><div class="phone"><img src="/bc/album.webp" alt="Club album sticker book with stickers to place" loading="lazy" width="640" height="1376"></div><figcaption><b>Club albums</b>A sticker book for each of the 50 clubs. Completing one permanently boosts that club's players.</figcaption></figure>
+<figure><div class="phone"><img src="/bc/streak.webp" alt="Daily streak ladder with a reward ready to claim" loading="lazy" width="640" height="1376"></div><figcaption><b>Daily streak with a shield</b>A 7-day ladder that grows week on week. One missed day doesn't wipe out the habit.</figcaption></figure>
+<figure><div class="phone"><img src="/bc/ranks.webp" alt="Division table with promotion zone and countdown" loading="lazy" width="640" height="1376"></div><figcaption><b>Divisions</b>Ten divisions, weekly reset. Top three go up, bottom three go down. The countdown is always on screen.</figcaption></figure>
+<figure><div class="phone"><img src="/bc/chest.webp" alt="Level chest bursting open" loading="lazy" width="640" height="1376"></div><figcaption><b>Levels and chests</b>Every level-up opens a chest that can upgrade as it opens. Milestones unlock kits, arenas and badges.</figcaption></figure>
+<figure><div class="phone"><img src="/bc/level-road.webp" alt="Level road showing XP sources and upcoming chests" loading="lazy" width="640" height="1376"></div><figcaption><b>Level road</b>Players always see the next reward and exactly how to reach it.</figcaption></figure>
+<figure><div class="phone"><img src="/bc/pass.webp" alt="Season pass with Pro perks" loading="lazy" width="640" height="1376"></div><figcaption><b>Season pass</b>Measured in matches, not calendar weeks, so casual and heavy players both finish it.</figcaption></figure>
+<figure><div class="phone"><img src="/bc/store.webp" alt="Store with starter bundle and scout's pick" loading="lazy" width="640" height="1376"></div><figcaption><b>Store and scout list</b>Starter bundle, daily scout picks and cosmetics, each behind an operator switch.</figcaption></figure>
+</div>
+
+<div class="losing">
+<div class="phone"><img src="/bc/result.webp" alt="A defeat that still pays out coins, double XP, shards and season pass progress" loading="lazy" width="640" height="1376"></div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<span class="eyebrow">The churn moment</span>
+<h3>A losing session still leaves something behind.</h3>
+<p class="lead">In a slot, a bad session leaves nothing. In Backcourt, even a defeat pays out coins, XP, Shards and season pass progress, and the division bar shows how close promotion is. The squad gets stronger and the album gets fuller.</p>
+<p class="lead" style="color:var(--chalk);font-weight:700">There is always a reason to come back that has nothing to do with chasing losses.</p>
+</div>
+</div>
+</section>
+
+<!-- VALUE -->
+<section class="alt">
+<div class="wrap pad stack">
+<div class="head"><span class="eyebrow">Value to the casino</span><h2 class="h2">What Backcourt does for your operation.</h2></div>
+<div class="grid">
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>A sports vertical with unlimited inventory</h3><p>No fixture schedule, no off-season, no waiting for kick-off. Basketball action every minute of every day, including the hours when real sports are quiet.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div><h3>More bets per session</h3><p>Every match has up to four betting windows. Players who would place one bet on a real game place several here, each one a fresh decision driven by what just happened on court.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div><h3>Longer player lifetime</h3><p>Retention compounds. A player who returns for a whole season is worth many times one who leaves after a session. That is the biggest lever on lifetime value, and it is what Backcourt is designed around.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10l-3-3M17 17H7l3 3"/></svg></div><h3>A bridge between sportsbook and casino</h3><p>Sports bettors get something that feels like sport. Casino players get a game with depth and progression. Backcourt gives each audience a reason to cross over.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2 1-4 4-4s3 2 3 4"/></svg></div><h3>Your own community</h3><p>Divisions and leaderboards rank match results, never money, so your casino builds its own rivalries and its own regulars.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 20V7M12 7H8a2 2 0 1 1 2-3l2 3 2-3a2 2 0 1 1 2 3z"/></svg></div><h3>Engagement you don't pay for twice</h3><p>Streaks, chests, packs and the season pass are rewards inside the game. They keep players active without spending your bonus budget.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Optional extra revenue lines</h3><p>Where your markets allow it, the season pass, coin bundles and cosmetics add in-game revenue on top of betting. Every one sits behind an operator switch.</p></div>
+</div>
+</div>
+</section>
+
+<!-- NOTHING TO LOSE -->
+<section id="try" class="wrap pad stack">
+<div class="head"><span class="eyebrow">Why try it</span><h2 class="h2">Nothing to lose. A new category to win.</h2>
+<p class="lead">Adding Backcourt is one more game in your lobby, not a new product line. It runs on what you already have, and it doesn't compete for the same fixtures, feeds or players your other content depends on.</p></div>
+<div class="ntl">
+<div class="box cost">
+<span class="zero">0</span>
+<h3>What it doesn't ask of you</h3>
+<ul>
+<li><i class="yes">✓</i><span><b>No new wallet or account.</b> It launches with your existing player session and balance.</span></li>
+<li><i class="yes">✓</i><span><b>No data feeds or trading team.</b> A fictional league means no sports data costs and no odds to manage.</span></li>
+<li><i class="yes">✓</i><span><b>No integrity risk from real events.</b> No match-fixing exposure, no void bets, no postponed fixtures.</span></li>
+<li><i class="yes">✓</i><span><b>No bonus budget.</b> The retention rewards live inside the game.</span></li>
+<li><i class="yes">✓</i><span><b>No all-or-nothing switch.</b> Start in one market, keep sensitive features off, widen when the numbers say so.</span></li>
+</ul>
+</div>
+<div class="box gain">
+<span class="zero" style="color:var(--win);text-shadow:0 0 30px rgba(61,220,132,.3)">+</span>
+<h3>What you get</h3>
+<ul>
+<li><i class="yes">+</i><span><b>A title nobody else in your lobby has.</b> Sports manager plus live betting is a new category, and basketball is open.</span></li>
+<li><i class="yes">+</i><span><b>A reason to come back daily, weekly and seasonally.</b> Four loops working on retention every day.</span></li>
+<li><i class="yes">+</i><span><b>More betting decisions per session</b> through quarter-break live markets.</span></li>
+<li><i class="yes">+</i><span><b>Round-the-clock sports content</b> for the nights and off-seasons when your sportsbook is quiet.</span></li>
+<li><i class="yes">+</i><span><b>A cross-sell path</b> from sportsbook to casino and back again.</span></li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- FITS EVERY CASINO -->
+<section class="alt">
+<div class="wrap pad stack">
+<div class="head"><span class="eyebrow">Fits every casino</span><h2 class="h2">One game, configured for your players and your markets.</h2>
+<p class="lead">Operator switches turn each sensitive feature on or off per market, so the same game fits a crypto casino, a regulated EU brand and a sportsbook-first operator.</p></div>
+<div class="fit">
+<div class="fitc"><span class="k">Sportsbook-led</span><h3>Keep sports fans betting between fixtures</h3><p>Live markets your players already understand, available on the nights the real schedule is empty.</p></div>
+<div class="fitc"><span class="k">Casino-led</span><h3>Give slot players a game with depth</h3><p>Packs, chests and collections feel familiar, with a squad and a division that give every session a purpose.</p></div>
+<div class="fitc"><span class="k">Crypto and instant games</span><h3>Fast rounds with a meta on top</h3><p>Two-to-five-minute matches and small stakes suit high-frequency play, with progression to bring players back.</p></div>
+<div class="fitc"><span class="k">Regulated markets</span><h3>Compliance switches built in</h3><p>Coin sales, paid packs, pass perks and spend caps can be switched off. Rewards are never tied to wagering by default.</p></div>
+<div class="fitc"><span class="k">Mobile-first</span><h3>Designed for one thumb</h3><p>A phone-column layout with the tab bar in reach. Works in the lobby frame or full screen.</p></div>
+<div class="fitc"><span class="k">New or growing brands</span><h3>A headline title for launch</h3><p>A distinctive game to feature in campaigns, with a free-play demo mode for your lobby and affiliates.</p></div>
+</div>
+</div>
+</section>
+
+<!-- DEDICATED PAGE RECOMMENDATION -->
+<section id="page" class="wrap pad stack">
+<div class="head"><span class="eyebrow">Our recommendation</span><h2 class="h2">Give Backcourt its own page, not just a tile.</h2>
+<p class="lead">Backcourt is a destination, not a one-spin game. Players return to it daily, so it pays to give it a home where the season, the division and the next reward are always visible.</p></div>
+<div class="rec">
+<ol class="reclist">
+<li><span><b>A dedicated page in your main navigation</b>Next to Casino and Sports, so returning players find it in one tap.</span></li>
+<li><span><b>The launch button at the top</b>Open straight into the player's squad, with the next match ready.</span></li>
+<li><span><b>The season and division on show</b>A countdown to the Monday reset and the season pass end gives players a reason to come back today.</span></li>
+<li><span><b>Promotion slots for your campaigns</b>New season, new card series, weekend tournaments: a natural place for your CRM to point to.</span></li>
+<li><span><b>Deep links from the sportsbook</b>Link from basketball markets and quiet match nights to keep sports bettors in your product.</span></li>
+</ol>
+<div class="browser" aria-label="Suggested layout for a dedicated Backcourt page in a casino">
+<div class="bbar"><i></i><i></i><i></i><span>yourcasino.com/backcourt</span></div>
+<div class="cnav"><span>Casino</span><span>Live casino</span><span>Sports</span><b>Backcourt</b><span>Promotions</span></div>
+<div class="cbody">
+<div class="cban"><strong>Season 1 · Week 3</strong><small>Your squad is 2 wins from promotion</small><span class="mini">Play now</span></div>
+<div class="cbox"><h4>Division 6 · resets in 2d 17h</h4>
+<div class="lb"><b>1</b><span>Lehe Street Five</span><b>12</b></div>
+<div class="lb"><b>2</b><span>Helsinki Frostbite</span><b>9</b></div>
+<div class="lb"><b>3</b><span>Thessaloniki Tritons</span><b>9</b></div>
+<div class="lb"><b>4</b><span>Vancouver Orcas</span><b>9</b></div></div>
+<div class="cbox"><h4>Season pass</h4><span>Tier 11 of 30</span><div class="bar"><span style="width:37%"></span></div><span>26 matches left</span><h4 style="margin-top:6px">This week</h4><span>Elite pack weekend</span></div>
+</div>
+</div>
+</div>
+<p style="font-size:13px;color:var(--dim)">Suggested layout. We'll share page assets and copy for your team.</p>
+</section>
 
 <!-- PLAY THE DEMO -->
-<section aria-label="Play the demo" class="wrap" style="padding-block:88px">
-<div class="game-panel" style="background:#d9a066;color:#2b1203;border-radius:24px;padding:clamp(24px,4vw,48px);background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 2px,transparent 2px 64px)">
-<div style="min-width:0;display:flex;flex-direction:column;gap:16px">
-<span style="align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#1b130e;color:#ffd23f;padding:5px 10px;border-radius:999px">Fun to play</span>
-<h2 style="margin:0;font-family:Bungee,Impact,'Arial Black',sans-serif;font-weight:400;font-size:clamp(30px,4vw,48px);line-height:1;text-wrap:balance">Don't take our word for it. Play a match.</h2>
-<p style="margin:0;font-size:17px;line-height:1.55;max-width:52ch">Open the demo on your phone, draft your five, pick a game plan and bet demo credits through all four quarters. Open a pack while you're there. Five minutes is enough to see why players come back.</p>
-<div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
-<a href="/play/index.html" class="btn" style="background:#1b130e;color:#ffd23f;box-shadow:0 5px 0 #000">Play the demo</a>
-<span style="font-size:14px;font-weight:500">Demo credits only. Sound on for the full arena.</span>
+<section class="wrap" aria-label="Play the demo" style="padding-bottom:clamp(64px,8vw,104px)">
+<div class="demo">
+<div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+<span class="pill" style="align-self:flex-start;background:var(--oak);color:var(--led)">Try it yourself</span>
+<h2>Don't take our word for it. Play a match.</h2>
+<p>Open the demo on your phone, draft your five, pick a game plan and bet demo credits through all four quarters. Open a pack while you're there. Five minutes is enough to see why players come back.</p>
+<div class="ctas"><a class="btn" href="https://backcourt.fyi/play/index.html" target="_blank" rel="noopener">Play the demo</a><span style="font-size:14px;font-weight:600">Demo credits only. Sound on for the full arena.</span></div>
 </div>
+<div class="qr"><svg xmlns="http://www.w3.org/2000/svg" width="264" height="264" class="segno" viewBox="0 0 264 264" role="img" aria-label="QR code to open the Backcourt demo on your phone" style="width:170px;height:170px;display:block"><g transform="scale(8)"><path fill="#f4ecdf" d="M0 0h33v33h-33z"/><path class="qrline" stroke="#1b130e" d="M2 2.5h7m4 0h2m1 0h1m2 0h1m4 0h7m-29 1h1m5 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h5m2 0h2m1 0h3m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h3m3 0h4m1 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h1m2 0h1m3 0h4m2 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m3 0h3m7 0h1m1 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-21 1h1m1 0h1m5 0h1m1 0h1m-19 1h1m5 0h1m1 0h4m3 0h3m1 0h1m1 0h2m2 0h3m-28 1h1m4 0h1m2 0h1m2 0h5m2 0h2m3 0h2m1 0h2m-28 1h1m2 0h1m2 0h1m3 0h1m1 0h4m2 0h1m1 0h2m1 0h1m-24 1h3m1 0h2m1 0h2m1 0h2m1 0h1m7 0h2m2 0h1m-25 1h1m4 0h2m1 0h2m2 0h1m2 0h1m5 0h2m4 0h1m-25 1h1m2 0h1m2 0h2m3 0h3m1 0h2m1 0h3m2 0h2m-29 1h1m1 0h2m1 0h2m5 0h1m2 0h1m2 0h1m3 0h2m1 0h2m-24 1h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m3 0h1m1 0h1m2 0h1m1 0h1m1 0h1m-29 1h1m1 0h2m2 0h1m1 0h1m1 0h1m6 0h2m6 0h2m-27 1h2m1 0h1m5 0h3m1 0h3m1 0h8m1 0h3m-29 1h3m1 0h3m1 0h3m1 0h1m2 0h2m2 0h2m1 0h1m1 0h2m2 0h1m-29 1h1m3 0h1m2 0h1m1 0h1m3 0h1m5 0h3m2 0h1m-25 1h1m4 0h6m3 0h1m1 0h2m1 0h6m1 0h3m-21 1h2m1 0h1m2 0h2m1 0h2m1 0h1m3 0h2m-26 1h7m4 0h2m2 0h2m1 0h3m1 0h1m1 0h3m-27 1h1m5 0h1m2 0h1m1 0h1m2 0h1m1 0h1m3 0h1m3 0h1m2 0h1m-28 1h1m1 0h3m1 0h1m3 0h2m1 0h4m2 0h7m2 0h1m-29 1h1m1 0h3m1 0h1m3 0h2m1 0h6m2 0h1m3 0h2m1 0h1m-29 1h1m1 0h3m1 0h1m4 0h1m3 0h1m1 0h1m1 0h1m2 0h6m-28 1h1m5 0h1m2 0h1m1 0h1m1 0h2m3 0h2m2 0h1m2 0h2m1 0h1m-29 1h7m1 0h3m1 0h1m1 0h2m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1"/></g></svg><span>Scan to play on your phone</span></div>
 </div>
-<div class="game-embed">
-<div class="game-phone"><img src="/bc/game-mock.png" alt="Backcourt Manager live match view: scoreboard, court with both teams, playback controls and the play-by-play feed" loading="lazy" width="433" height="879"></div>
+</section>
+
+<!-- MATHS + RG -->
+<section class="alt" id="maths">
+<div class="wrap pad stack">
+<div class="head"><span class="eyebrow">Trust</span><h2 class="h2">Fair maths. Responsible by design.</h2></div>
+<div class="two">
+<div class="panel"><h3>Fair odds, transparent maths</h3><ul class="ticks">
+<li><b>Odds from simulation.</b> Every price comes from thousands of simulations of the exact matchup, including both teams, tactics, boosters and the AI coach. Prices re-run live at every break.</li>
+<li><b>Team strength changes the odds, not the house edge.</b> A stronger squad gets shorter odds in exact proportion. Verified across 11 million simulated bets: return stays flat whatever the matchup.</li>
+<li><b>Clear margins per market,</b> with an engine built for independent lab certification.</li>
+<li><b>Cash out at every break,</b> so players can lock in value before the next quarter.</li></ul></div>
+<div class="panel"><h3>Built for regulated markets</h3><ul class="ticks">
+<li><b>Playable without betting.</b> Every match earns rewards whether a bet is placed or not.</li>
+<li><b>Rewards never tied to wagering by default.</b> No XP or pass progress for stake size.</li>
+<li><b>Leaderboards rank results, never money.</b></li>
+<li><b>Published drop rates and pity timers</b> on every pack.</li>
+<li><b>No player-to-player trading.</b> In-game items can't be cashed out.</li>
+<li><b>Operator switches</b> for coin sales, paid packs, pass perks, division odds, spend caps and stake limits.</li></ul></div>
 </div>
 </div>
 </section>
 
-<section id="retention" class="wrap" style="display:flex;flex-direction:column;gap:36px;padding-block:104px">
-<div class="head"><span class="eyebrow">Retention</span><h2 class="h2">Built for day 30, not just day 1.</h2><p class="lead">Most casino content is designed for the first session. Backcourt is designed around the loops that bring a player back.</p></div>
-<div style="overflow-x:auto;background:#120c08;border:1px solid #4a3727;border-radius:16px;padding:8px 12px"><table class="tbl"><thead><tr><th scope="col">Loop</th><th scope="col">How long</th><th scope="col">What pulls the player back</th></tr></thead><tbody><tr><td>Match</td><td style="white-space:nowrap;color:#f4ecdf">2 to 5 minutes</td><td>The result, the rewards, one more tweak to the squad</td></tr><tr><td>Daily</td><td style="white-space:nowrap;color:#f4ecdf">10 to 20 minutes</td><td>Daily streak, packs to open, cards to upgrade, double XP on the first match</td></tr><tr><td>Weekly</td><td style="white-space:nowrap;color:#f4ecdf">7 days</td><td>Division promotion and relegation every Monday, fixture list, Revenge matches</td></tr><tr><td>Season</td><td style="white-space:nowrap;color:#f4ecdf">40 matches</td><td>Season pass with free and Pro tracks, exclusive cosmetics, Legendary picks</td></tr></tbody></table></div>
-<div style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start"><div style="flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:18px"><h3 style="margin:0;font-size:22px;font-weight:800">The systems behind it</h3><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))"><div class="card"><h3>Card collection with four tiers.</h3><p>Common, Rare, Epic and Legendary, with real scarcity (only 50 copies of each Legendary). Duplicates turn into Shards, so no pack is wasted.</p></div><div class="card"><h3>Club albums.</h3><p>A sticker book for each of the 50 clubs. Completing one permanently boosts that club's players in your lineup. Collector milestones run all the way to 500 placed stickers.</p></div><div class="card"><h3>Divisions.</h3><p>Ten divisions, 20 teams each, weekly reset. Top three go up, bottom three go down. A progress bar always shows how many wins to the promotion line.</p></div><div class="card"><h3>Fixture list with rivalries.</h3><p>Three open matches at a time (easier, even, harder). A club that beats you comes back as a Revenge match. Beat all 19 rivals for a clean sweep reward.</p></div><div class="card"><h3>Daily streak with a shield.</h3><p>A 7-day reward ladder that grows week on week, plus a streak shield so one missed day doesn't wipe out a habit.</p></div><div class="card"><h3>Levels and chests.</h3><p>Every level-up opens a chest that can upgrade as it opens. Milestone levels unlock kits, arenas and badges.</p></div><div class="card"><h3>Season pass.</h3><p>Measured in matches, not calendar weeks, so casual and heavy players both finish it.</p></div><div class="card"><h3>Team identity.</h3><p>Custom kits, arenas and badges that opponents see. Cosmetics only, no effect on stats.</p></div></div></div>
-<div style="flex:1 1 360px;min-width:0;display:flex;gap:14px;justify-content:center"><div class="phone" style="width:48%;max-width:220px"><img src="/bc/4cc8d87e-0a79-44d7-a081-d452a7dd89eb.png" alt="Pack opening reveals a Rare card"></div><div class="phone" style="width:48%;max-width:220px;margin-top:40px"><img src="/bc/a5426f15-5214-4df5-92bf-a739748feba7.png" alt="Squad board with five starters, chemistry links and team rating"></div></div></div>
-<div style="border:1px solid #ff7a1a;background:#36271c;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:10px"><h3 style="margin:0;font-size:22px;font-weight:800">Why a player doesn't churn after a losing session</h3><p class="lead">In a slot, a bad session leaves nothing behind. In Backcourt, a losing match still earns XP, Shards and season pass progress. The squad gets stronger and the album gets fuller. There is always a reason to come back that has nothing to do with chasing losses.</p></div>
+<!-- INTEGRATION -->
+<section id="integration" class="wrap pad stack">
+<div class="head"><span class="eyebrow">Integration</span><h2 class="h2">Runs inside your casino.</h2>
+<p class="lead">Backcourt launches in your lobby using your existing player session and balance. No separate account, no separate wallet.</p></div>
+<div class="flow">
+<div><b>Launch</b><span>From your lobby or a dedicated page, with the player's session.</span></div>
+<div><b>Bet</b><span>Stakes come from the player's casino balance.</span></div>
+<div><b>Settle</b><span>Wins land in the balance at the final buzzer.</span></div>
+<div><b>Progress</b><span>Squad and season stored per player and per operator.</span></div>
+</div>
+<p class="lead">A free-play demo mode is available for your lobby and for affiliates.</p>
 </section>
 
-<section class="alt"><div class="wrap" style="display:flex;flex-direction:column;gap:36px;padding-block:88px">
-<div class="head"><span class="eyebrow">Value to the casino</span><h2 class="h2">What Backcourt does for your operation.</h2></div>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))"><div class="card"><h3>A sports vertical with unlimited inventory</h3><p>No fixture schedule, no off-season, no waiting for kick-off. Basketball action is available every minute of every day, including the hours when real sports are quiet.</p></div><div class="card"><h3>More bets per session</h3><p>Every match has up to four betting windows. Players who would place one bet on a real game place several here, each one a fresh decision driven by what just happened on court.</p></div><div class="card"><h3>Longer player lifetime</h3><p>The meta-game is built to lift weekly retention. Retention compounds: a player who returns for a season is worth many times a player who leaves after one session. That is the single biggest lever on lifetime value, and it is what Backcourt is designed around.</p></div><div class="card"><h3>A bridge between your sportsbook and your casino</h3><p>Sports bettors get something that feels like sport. Casino players get a game with depth and progression. Backcourt gives each audience a reason to cross over.</p></div><div class="card"><h3>Your own community</h3><p>A weekly Club Cup leaderboard runs per operator, so every casino builds its own rivalries and its own regulars.</p></div><div class="card"><h3>Engagement you don't have to pay for twice</h3><p>Streaks, chests, packs and the season pass are rewards inside the game. They keep players active without spending your bonus budget.</p></div><div class="card"><h3>Optional extra revenue lines</h3><p>Where your markets allow it, the season pass, coin bundles and cosmetics add in-game revenue on top of betting. Every one of them is behind an operator switch.</p></div></div>
-</div></section>
-
-<section id="maths" class="wrap" style="display:flex;flex-direction:column;gap:36px;padding-block:88px">
-<div class="head"><span class="eyebrow">Fair maths</span><h2 class="h2">Fair odds. Transparent maths.</h2></div>
-<ul class="ticks"><li><b>Odds from simulation.</b> Every price comes from thousands of simulations of the exact matchup, including both teams, tactics, boosters and the AI coach. Prices re-run live at every break.</li><li><b>Team strength changes the odds, not the house edge.</b> A stronger squad gets shorter odds in exact proportion. Verified across 11 million simulated bets: return stays flat whatever the matchup.</li><li><b>Clear margins per market.</b> Each market has its own published return to player, and the engine is built for independent lab certification.</li><li><b>Cash out at every break.</b> Players can lock in value before the next quarter.</li></ul>
+<!-- ROADMAP -->
+<section class="alt">
+<div class="wrap pad stack">
+<div class="head"><span class="eyebrow">Roadmap</span><h2 class="h2">Basketball first. One engine, every sport.</h2>
+<p class="lead">Backcourt is built on a sport-agnostic core. The collection, packs, albums, divisions, season pass, store, wallet, pricing and settlement are shared. Each new sport plugs in its own match engine, league, markets and court.</p></div>
+<ol class="road">
+<li class="now"><b>Basketball</b><span>Live demo now</span></li>
+<li class="next"><b>Ice hockey</b><span>Next on the roadmap</span></li>
+<li class="later"><b>Football</b><span>Planned</span></li>
+<li class="later"><b>More sports</b><span>Shaped by operator demand</span></li>
+</ol>
+<p class="lead">One integration, one player profile, one meta-game. As new sports launch, your players' progress, coins and season pass carry across, and your lobby gains a new title without a new integration. <b style="color:var(--chalk)">Have a sport your players love? Tell us in the demo call.</b></p>
+</div>
 </section>
 
-<section class="alt"><div class="wrap" style="display:flex;flex-direction:column;gap:36px;padding-block:88px">
-<div class="head"><span class="eyebrow">Responsible by design</span><h2 class="h2">Built for regulated markets.</h2></div>
-<ul class="ticks"><li><b>Playable without betting.</b> Every match earns rewards whether a bet is placed or not.</li><li><b>Rewards never tied to wagering by default.</b> No XP or pass progress for stake size.</li><li><b>Leaderboards rank results, never money.</b> No ranking by amount won or staked.</li><li><b>Published drop rates and pity timers</b> on every pack.</li><li><b>No player-to-player trading.</b> In-game items can't be cashed out.</li><li><b>Operator switches for every sensitive feature:</b> coin sales, paid packs, season pass perks, division odds, spend caps, stake limits. Configure Backcourt for each market you serve.</li></ul>
-</div></section>
-
-<section id="integration" class="wrap" style="display:flex;flex-direction:column;gap:36px;padding-block:88px">
-<div class="head"><span class="eyebrow">Integration</span><h2 class="h2">Runs inside your casino.</h2><p class="lead">Backcourt launches in your lobby using your existing player session and balance. No separate account, no separate wallet. Player progress is stored per player and per operator, and bets settle into your balance at the final buzzer. A free-play demo mode is available for your lobby and for affiliates.</p></div>
-
-</section>
-
-<section class="alt"><div class="wrap" style="display:flex;flex-direction:column;gap:36px;padding-block:88px">
-<div class="head"><span class="eyebrow">Roadmap</span><h2 class="h2">Basketball first. One engine, every sport.</h2><p class="lead">Backcourt is built on a sport-agnostic core. The collection, packs, albums, divisions, season pass, store, wallet, pricing and settlement are shared. Each new sport plugs in its own match engine, league, markets and court.</p></div>
-<ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px"><li style="border:1px solid #3ddc84;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px;background:#1b130e"><span style="font-weight:800;font-size:18px">Basketball</span><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#3ddc84">Live demo available now</span></li><li style="border:1px solid #ffd23f;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px;background:#1b130e"><span style="font-weight:800;font-size:18px">Ice hockey</span><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ffd23f">Next on the roadmap</span></li><li style="border:1px solid #b8a690;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px;background:#1b130e"><span style="font-weight:800;font-size:18px">Football</span><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b8a690">Planned</span></li><li style="border:1px solid #b8a690;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px;background:#1b130e"><span style="font-weight:800;font-size:18px">More sports</span><span style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b8a690">Shaped by operator demand</span></li></ol>
-<p class="lead">One integration, one player profile, one meta-game. As new sports launch, your players' progress, coins and season pass carry across, and your lobby gains a new title without a new integration.</p>
-<p class="lead" style="font-weight:700;color:#f4ecdf">Have a sport your players love? Tell us in the demo call.</p>
-</div></section>
-
-<section class="wrap" style="display:flex;flex-direction:column;gap:36px;padding-block:88px">
+<!-- FAQ -->
+<section class="wrap pad stack">
 <div class="head"><span class="eyebrow">FAQ</span><h2 class="h2">Questions operators ask.</h2></div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px"><details style="background:#2a1e16;border:1px solid #4a3727;border-radius:14px;padding:18px 20px"><summary style="cursor:pointer;font-weight:800">How long is a match?</summary><p style="margin:10px 0 0;font-size:15px;color:#d7cab6">Two to five minutes of play, with speed controls from 0.25x to 4x.</p></details><details style="background:#2a1e16;border:1px solid #4a3727;border-radius:14px;padding:18px 20px"><summary style="cursor:pointer;font-weight:800">Do players have to bet to play?</summary><p style="margin:10px 0 0;font-size:15px;color:#d7cab6">No. Every match is playable and rewarding without a stake. Betting is an optional layer on top.</p></details><details style="background:#2a1e16;border:1px solid #4a3727;border-radius:14px;padding:18px 20px"><summary style="cursor:pointer;font-weight:800">What markets are offered?</summary><p style="margin:10px 0 0;font-size:15px;color:#d7cab6">Match winner, handicap, total points, captain's points and a bet builder, before tip-off and at every quarter break.</p></details><details style="background:#2a1e16;border:1px solid #4a3727;border-radius:14px;padding:18px 20px"><summary style="cursor:pointer;font-weight:800">Can buying cards buy better betting returns?</summary><p style="margin:10px 0 0;font-size:15px;color:#d7cab6">No. Card strength changes the odds a player is offered, not the house edge. Features that could indirectly affect returns can be switched off per market.</p></details><details style="background:#2a1e16;border:1px solid #4a3727;border-radius:14px;padding:18px 20px"><summary style="cursor:pointer;font-weight:800">What stake range is supported?</summary><p style="margin:10px 0 0;font-size:15px;color:#d7cab6">€0.10 to €500 per bet by default, configurable by the operator.</p></details><details style="background:#2a1e16;border:1px solid #4a3727;border-radius:14px;padding:18px 20px"><summary style="cursor:pointer;font-weight:800">Is it a real league?</summary><p style="margin:10px 0 0;font-size:15px;color:#d7cab6">No. Backcourt League is a fictional league of 50 clubs and 500 players, so there are no data feed costs, no licensing of real athletes and no integrity risk from real-world events.</p></details></div>
+<div class="faq">
+<details><summary>How long is a match?</summary><p>Two to five minutes of play, with speed controls from 0.25x to 4x.</p></details>
+<details><summary>Do players have to bet to play?</summary><p>No. Every match is playable and rewarding without a stake. Betting is an optional layer on top.</p></details>
+<details><summary>What markets are offered?</summary><p>Match winner, handicap, total points, captain's points and a bet builder, before tip-off and at every quarter break.</p></details>
+<details><summary>Can buying cards buy better betting returns?</summary><p>No. Card strength changes the odds a player is offered, not the house edge. Features that could indirectly affect returns can be switched off per market.</p></details>
+<details><summary>What stake range is supported?</summary><p>€0.10 to €500 per bet by default, configurable by the operator.</p></details>
+<details><summary>Is it a real league?</summary><p>No. Backcourt League is a fictional league of 50 clubs and 500 players, so there are no data feed costs, no licensing of real athletes and no integrity risk from real-world events.</p></details>
+<details><summary>Where should it live in our lobby?</summary><p>We recommend a dedicated page in your main navigation, plus a tile in the casino and sports lobbies. It is a game players return to daily, so a permanent home works better than a rotating slot position.</p></details>
+<details><summary>Can we start small?</summary><p>Yes. Launch in one market with the features you choose, measure retention, and widen from there.</p></details>
+</div>
 </section>
 
 <!-- FINAL CTA -->
-<section id="demo" style="background:#ff7a1a;color:#2b1203">
-<div class="wrap" style="display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding-block:80px">
-<h2 style="margin:0;font-family:Bungee,Impact,'Arial Black',sans-serif;font-weight:400;font-size:clamp(32px,4.4vw,52px);line-height:1;text-wrap:balance">See a full match in five minutes.</h2>
-<p style="margin:0;font-size:18px;line-height:1.55;max-width:56ch">We'll walk you through a match, the betting windows and the retention meta, and show how Backcourt fits your lobby.</p>
-<div style="display:flex;flex-wrap:wrap;gap:18px;align-items:center">
-<a href="https://calendar.app.google/L7rUztg9ASr9erwa7" target="_blank" rel="noopener" class="btn" style="background:#1b130e;color:#ffd23f;box-shadow:0 5px 0 #000">Book a demo</a>
-<a href="/play/index.html" style="color:#2b1203;font-weight:800;text-decoration:underline;text-underline-offset:4px;padding:8px 0">Play the demo now</a>
-</div>
+<section class="final" id="demo">
+<div class="wrap" style="display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding-block:clamp(64px,8vw,96px)">
+<h2>See a full match in five minutes.</h2>
+<p style="font-size:18px;max-width:58ch">We'll walk you through a match, the betting windows and the retention meta, and show how Backcourt fits your lobby.</p>
+<div class="ctas"><a class="btn" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3A7rvaqZ-fVO2oaZ9vKrMJ2l95s8OJRrVpG70i7G2ethCc_MwxlA0vo976-ABKIEil0Oylvsg7" target="_blank" rel="noopener">Book a demo</a><a class="lnk" href="https://backcourt.fyi/play/index.html" target="_blank" rel="noopener">Or play the demo now</a></div>
 </div>
 </section>
 
-<!-- FOOTER -->
-<footer style="border-top:1px solid #4a3727">
-<div class="wrap" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px;padding-block:32px">
-<div style="display:flex;align-items:center;gap:12px">
-<svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#ff7a1a"></rect><circle cx="50" cy="40" r="18" fill="#1b130e"></circle><path d="M41 48H59L71 100H29Z" fill="#1b130e"></path></svg>
-<span style="font-family:Bungee,Impact,sans-serif;font-size:16px">BACKCOURT</span>
-<span style="font-size:13px;color:#b8a690">© 2026 noclip OÜ</span>
-</div>
-<p style="margin:0;font-size:13px;color:#b8a690;max-width:60ch">18+ · Play responsibly. Backcourt Manager is a real-money game for licensed operators.</p>
-</div>
-</footer>
+<footer><div class="wrap foot">
+<div style="display:flex;align-items:center;gap:12px"><svg width="26" height="26" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#ff7a1a"/><circle cx="50" cy="40" r="18" fill="#1b130e"/><path d="M41 48H59L71 100H29Z" fill="#1b130e"/></svg><span style="font-family:var(--f-num);font-size:15px;color:var(--chalk)">BACKCOURT</span><span>© 2026 noclip OÜ</span></div>
+<p style="max-width:60ch">18+ · Play responsibly. Backcourt is a real-money game for licensed operators.</p>
+</div></footer>
 
 </div>
