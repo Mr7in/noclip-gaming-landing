@@ -3,7 +3,7 @@ import { createRouter, rootRouteId } from "@tanstack/react-router";
 import { describe, expect, it } from "vitest";
 
 import { routeTree } from "@/routeTree.gen";
-import { redirectToGame } from "@/routes/play";
+import { DEMO_APP_URL, redirectToGame } from "@/routes/play";
 
 // Match routes without running loaders or rendering: loaders may need a server or
 // network the test run lacks, and jsdom never loads the stylesheets React waits on.
@@ -21,18 +21,19 @@ describe("App routing", () => {
     expect(router.matchRoutes(path).at(-1)?.routeId).toBe("/play");
   });
 
-  it("does not redirect the static /play/index.html URL", () => {
-    expect(redirectToGame("/play/index.html")).toBeUndefined();
-  });
-
-  it("redirects to the explicit static game URL with HTTP 301", () => {
+  it("forwards the game URLs to the hosted demo app with HTTP 301", () => {
     expect.assertions(3);
     try {
       redirectToGame("/play");
     } catch (error) {
       expect(error).toBeInstanceOf(Response);
       expect((error as Response).status).toBe(301);
-      expect((error as Response).headers.get("Location")).toBe("/play/index.html");
+      expect((error as Response).headers.get("Location")).toBe(DEMO_APP_URL);
     }
+  });
+
+  it("leaves paths outside /play alone", () => {
+    expect(redirectToGame("/")).toBeUndefined();
+    expect(redirectToGame("/pricing")).toBeUndefined();
   });
 });
