@@ -5,11 +5,13 @@ import { createFileRoute, redirect } from "@tanstack/react-router";
 // instead of 404ing.
 export const DEMO_APP_URL = "https://noclip-gaming.vercel.app/";
 
-const GAME_PATHS = new Set(["/play", "/play/", "/play/index.html"]);
+// Nothing lives under /play any more, so the whole tree forwards.
+function isGamePath(pathname: string) {
+  return pathname === "/play" || pathname.startsWith("/play/");
+}
 
 export function redirectToGame(pathname: string) {
-  // TanStack can fuzzy-match this route for unknown children. Never redirect those.
-  if (!GAME_PATHS.has(pathname)) return;
+  if (!isGamePath(pathname)) return;
   throw redirect({ href: DEMO_APP_URL, statusCode: 301 });
 }
 
