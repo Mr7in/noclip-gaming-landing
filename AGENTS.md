@@ -9,5 +9,5 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- The playable demo is hosted externally at https://noclip-gaming.vercel.app/ — no game bundle lives in this repo; every "Play the demo" link opens that URL in a new tab, and the `/play` TanStack route exists only to 301 old game links there.
+- The playable demo is hosted outside this repo (URL in `src/routes/play.tsx`) — never copy a game bundle back in; every "Play the demo" link opens that hosted app in a new tab, and old `/play` addresses only ever redirect there (the `/play` route serves the pretty URLs, the `src/server.ts` worker entry serves the old static file path).
 - Keep the supplied landing page as raw HTML/CSS, with the demo panel using a two-column grid; this preserves the imported page while preventing desktop wrapping.
