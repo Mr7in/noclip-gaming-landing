@@ -9,5 +9,5 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Serve the unmodified game as the explicit public static asset `/play/index.html`; the exact `/play` TanStack route redirects during SSR so both pretty URL variants work without relying on directory-index hosting.
+- The playable demo is hosted externally at https://noclip-gaming.vercel.app/ — no game bundle lives in this repo; every "Play the demo" link opens that URL in a new tab, and the `/play` TanStack route exists only to 301 old game links there.
 - Keep the supplied landing page as raw HTML/CSS, with the demo panel using a two-column grid; this preserves the imported page while preventing desktop wrapping.
