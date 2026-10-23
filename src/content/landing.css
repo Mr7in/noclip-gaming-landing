@@ -91,7 +91,7 @@
 .bc .ftxt ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;color:var(--body)}
 .bc .ftxt li{padding-left:22px;position:relative}
 .bc .ftxt li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:10px;border-radius:50%;background:var(--ball)}
-.bc .fimgs{display:flex;gap:16px;justify-content:center;min-width:0}
+.bc .fimgs{display:flex;gap:16px;justify-content:center;align-items:flex-start;min-width:0}
 .bc .fimgs .phone{width:46%;max-width:250px}
 .bc .fimgs .phone:nth-child(2){margin-top:48px}
 @media (max-width:820px){.bc .feat{grid-template-columns:1fr}.bc .feat.flip .ftxt{order:0}}
