@@ -3,7 +3,7 @@ import { createFileRoute, redirect } from "@tanstack/react-router";
 // The playable build is hosted outside this site now. These URLs used to serve
 // it directly and are already shared in old emails and previews, so they forward
 // instead of 404ing.
-export const DEMO_APP_URL = "https://basketball-demo.backcourt.fyi/";
+export const DEMO_APP_URL = "https://backcourt-demo.noclipgaming.space/";
 
 // Nothing lives under /play any more, so the whole tree forwards.
 function isGamePath(pathname: string) {
