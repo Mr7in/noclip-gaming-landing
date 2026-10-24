@@ -5,7 +5,7 @@ import landingCss from "@/content/landing.css?raw";
 export const Route = createFileRoute("/backcourt")({
   head: () => ({
     meta: [
-      { title: "Backcourt for operators — The basketball game your players come back to" },
+      { title: "Backcourt | Basketball manager + live betting | Noclip Gaming" },
       {
         name: "description",
         content:
