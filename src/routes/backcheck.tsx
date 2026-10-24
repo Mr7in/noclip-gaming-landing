@@ -1,33 +1,53 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { SiteNav, Footer, GameLogo, BookingButton, DemoButton, TrustPanels, Integration, CrossGame } from '@/components/studio/shared';
-import { Rink } from '@/components/studio/rink';
-import { GAMES, pageHead } from '@/lib/studio';
+import { createFileRoute } from "@tanstack/react-router";
+import backcheckHtml from "@/content/backcheck.html?raw";
+import backcheckCss from "@/content/backcheck.css?raw";
 
-export const Route = createFileRoute('/backcheck')({
-  head: () => pageHead('/backcheck', 'Backcheck | Hockey manager + live betting | Noclip Gaming', 'Build your lines, set the game plan and bet before puck drop and at every intermission. Backcheck is an ice hockey manager game built for lasting retention.'),
-  component: BackcheckPage,
+export const Route = createFileRoute("/backcheck")({
+  head: () => ({
+    meta: [
+      { title: "Backcheck | Hockey manager + live betting | Noclip Gaming" },
+      {
+        name: "description",
+        content:
+          "Backcheck is an ice hockey manager game with live betting built in. Players build their lines, set the game plan and bet before puck drop and at every intermission, in a fictional league of 32 clubs and 288 players.",
+      },
+      { property: "og:title", content: "Backcheck for operators" },
+      {
+        property: "og:description",
+        content:
+          "Backcheck is an ice hockey manager game with live betting built in. Players build their lines, set the game plan and bet before puck drop and at every intermission, in a fictional league of 32 clubs and 288 players.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://backcourt.fyi/backcheck" },
+      { property: "og:image", content: "https://backcourt.fyi/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Backcheck for operators" },
+      { name: "twitter:description", content: "Backcheck is an ice hockey manager game with live betting built in. Players build their lines, set the game plan and bet before puck drop and at every intermission, in a fictional league of 32 clubs and 288 players." },
+      { name: "twitter:image", content: "https://backcourt.fyi/og-image.jpg" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://backcourt.fyi/backcheck" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Bungee&family=DM+Mono:wght@400;500&family=Rubik:wght@400;500;700;800&display=swap",
+      },
+    ],
+  }),
+  component: Backcheck,
 });
-const features = [
-  { title: 'Build your lines.', copy: 'Collect hockey cards and put together lines with chemistry. Choose a captain who gives your team an identity, then find the combinations that work together.', detail: 'Hockey-card packs with published odds. A collection that persists between matches.', mode: 'plan' as const },
-  { title: 'Set the game plan.', copy: 'Make your coaching decisions before puck drop. Your lines and plan shape the matchup, and the prices reflect the team you actually put on the ice.', detail: 'Build your lines, set your captain and choose how to approach the opponent.', mode: 'plan' as const },
-  { title: 'Watch every shift.', copy: 'A live top-down rink and play-by-play bring the match to life. Rebounds create second chances. Penalties create power plays. A pulled goalie changes the closing moments.', detail: 'Hockey that feels like hockey, with live betting built into the match.', mode: 'live' as const },
-  { title: 'The Zamboni break.', copy: 'At every intermission, the ice resets and the decisions open up. Review live odds, cash out an open bet or change the plan before the next puck drop.', detail: 'Bet before puck drop and at every intermission. Coaching and betting happen together.', mode: 'break' as const },
-  { title: 'Make the arena erupt.', copy: 'Goals deserve a moment: a flashing goal light, the horn and confetti. Close games move into 3-on-3 overtime and shootouts, with the story alive until the finish.', detail: 'Power plays. Rebounds. Pulled goalies. Overtime. Shootouts.', mode: 'goal' as const },
-];
-const meta = [['Packs and collection','Published odds, hockey cards and meaningful collection progress.'],['Club albums','Build a club collection that gives the next pack a purpose.'],['Daily streak','A regular habit, with a shield against a missed day.'],['Divisions','Rivalries and promotion based on match results, never money.'],['Levels and chests','Visible progress and rewards earned through play.'],['Season pass','Free and optional paid progression, measured in matches.'],['Store','Packs, coin bundles and cosmetics where the market allows them.'],['Operator switches','Coin sales, paid packs, pass perks, division odds, spend caps and stake limits.']];
-function BackcheckPage() {
-  return <div className="studio hockey-page"><SiteNav game="backcheck"/><main>
-    <section className="hockey-hero studio-wrap"><div><span className="section-kicker">For casinos and sportsbooks · Live demo</span><GameLogo game="backcheck"/><h1>The hockey game<br/>with a reason to<br/><em>come back tonight.</em></h1><p>An ice hockey manager game with live betting built in. Players build their lines, set the game plan and bet on matches that last minutes. The collection, the divisions and the season bring them back tomorrow.</p><div className="actions"><BookingButton/><DemoButton game="backcheck"/></div></div><div className="hockey-hero-scene"><span className="arena-label">MANAGE THE LINES. OWN THE MOMENT.</span><Rink mode="goal"/><div className="hockey-scene-caption"><span>POWER PLAYS</span><span>OVERTIME</span><span>SHOOTOUTS</span></div></div></section>
-    <div className="hockey-ticker"><span>REAL DECISIONS</span><span>FICTIONAL LEAGUES</span><span>LIVE BETTING</span><span>LASTING PROGRESSION</span></div>
-    <section id="game" className="studio-section studio-wrap"><div className="section-heading"><span className="section-kicker">The game</span><h2>Hockey manager.<br/>Live betting. One game.</h2><p>Not a slot dressed as sport. A team the player builds, a plan they choose and a match they can follow, with fresh betting decisions at every break.</p></div><div className="hockey-features">{features.map((f,i)=><article key={f.title} className="hockey-feature"><div><span className="section-kicker">0{i+1} / The game</span><h3>{f.title}</h3><p>{f.copy}</p><p className="feature-detail">{f.detail}</p></div><Rink mode={f.mode}/></article>)}</div></section>
-    <section className="hockey-league"><div className="studio-wrap"><div><span className="section-kicker">A fictional league. Real hockey depth.</span><h2>Your own world<br/>on the ice.</h2><p>No sports data feeds. No athlete licensing. No integrity risk from real-world events. The schedule is yours, not a real league’s fixture list.</p></div><div className="league-numbers"><div><b>{GAMES.backcheck.clubs}</b><span>FICTIONAL CLUBS</span></div><div><b>{GAMES.backcheck.players}</b><span>PLAYERS TO COLLECT</span></div></div></div></section>
-    <section className="studio-section studio-wrap"><div className="section-heading"><span className="section-kicker">How a match works</span><h2>From the first plan<br/>to the final horn.</h2></div><div className="hockey-match-flow">{[['Build','Choose your lines, chemistry and captain.'],['Puck drop','Set the plan and place optional pre-game bets.'],['Intermission','Cash out, review live odds and adjust the plan.'],['Final horn','Bets settle and collection and season progress continue.']].map(([t,p])=><article key={t}><h3>{t}</h3><p>{p}</p></article>)}</div></section>
-    <section id="retention" className="studio-band"><div className="studio-wrap studio-section"><div className="section-heading"><span className="section-kicker">Retention</span><h2>Tonight’s match.<br/>Tomorrow’s reason to return.</h2><p>The same shared progression engine as Backcourt, with a hockey world of its own. Match, daily, weekly and season loops work together without drawing on your bonus budget.</p></div><div className="studio-loops">{[['Match','A result, rewards and a reason to adjust the lines.'],['Daily','A streak, collection progress and the next reward.'],['Weekly','Divisions, rivalries and the push for promotion.'],['Season','The pass, the collection and a team to make your own.']].map(([t,p],i)=><article key={t}><span>0{i+1} /</span><h3>{t}</h3><p>{p}</p></article>)}</div><div className="hockey-meta-grid">{meta.map(([t,p])=><article key={t}><h3>{t}</h3><p>{p}</p></article>)}</div><div className="retention-statement"><h3>A losing session still<br/>leaves something behind.</h3><p>The collection, levels and season progress persist. Players have a reason to return that is not about chasing losses. Every match is playable and rewarding without betting.</p></div></div></section>
-    <section className="studio-section studio-wrap"><div className="section-heading"><span className="section-kicker">Value to the operator</span><h2>A sports vertical<br/>without the off-season.</h2><p>Give sports bettors a familiar world and casino players a game with depth. Always-available matches, recurring rivalries and a persistent collection create a natural bridge between sportsbook and casino.</p></div><div className="hockey-match-flow"><article><h3>Always in season</h3><p>No waiting for real fixtures, postponed games or a quiet sports calendar.</p></article><article><h3>Fresh decisions</h3><p>Live odds at intermissions make every break a new coaching and betting moment.</p></article><article><h3>Your regulars</h3><p>Divisions and collections give your lobby an audience with something to come back for.</p></article><article><h3>Your market</h3><p>Start with the features you choose and expand as the retention numbers develop.</p></article></div></section>
-    <section id="trust" className="studio-band"><div className="studio-wrap studio-section"><div className="section-heading"><span className="section-kicker">Trust</span><h2>Fair maths.<br/>Responsible by design.</h2><p>Team strength changes the offered odds, not the house edge. Sensitive features are controlled per market, with the same principles and operator switches as Backcourt.</p></div><TrustPanels/></div></section>
-    <Integration/>
-    <section className="studio-band"><div className="studio-wrap studio-section"><div className="section-heading"><span className="section-kicker">FAQ</span><h2>Before puck drop.</h2></div><div className="hockey-faq">{[['Do players have to bet?','No. Every match can be played and rewards earned without a stake. Betting is an optional layer.'],['Is this a real hockey league?','No. Backcheck has 32 fictional clubs and 288 players, with no sports data feeds, athlete licensing or integrity risk from real events.'],['When can players bet?','Before puck drop and at every intermission. Breaks also let players cash out and change the game plan.'],['Does it include overtime and shootouts?','Yes. The match engine includes penalties, power plays, rebounds, pulled goalies, 3-on-3 overtime and shootouts.'],['Can we control paid features?','Yes. Operator switches cover coin sales, paid packs, pass perks, division odds, spend caps and stake limits per market.'],['Do we need a separate integration?','The sport-agnostic core is shared with Backcourt. One integration supports new titles, using your existing player session and balance.']].map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></div></section>
-    <section className="studio-wrap studio-section"><CrossGame game="backcourt"/></section>
-    <section className="studio-final"><div className="studio-wrap"><span className="section-kicker">See Backcheck in action</span><h2>Your next headline title.<br/>Ready for puck drop.</h2><p>We’ll walk through the match, the live betting and the retention engine, and show how Backcheck fits your lobby.</p><div className="actions"><BookingButton/><DemoButton game="backcheck"/></div></div></section>
-  </main><Footer game="backcheck"/></div>;
+
+function Backcheck() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: backcheckCss }} />
+      <div
+        dangerouslySetInnerHTML={{ __html: backcheckHtml }}
+        onSubmit={(e) => e.preventDefault()}
+      />
+    </>
+  );
 }
