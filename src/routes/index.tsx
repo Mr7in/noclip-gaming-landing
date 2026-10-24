@@ -1,66 +1,26 @@
-import { createFileRoute } from "@tanstack/react-router";
-import landingHtml from "@/content/landing.html?raw";
-import landingCss from "@/content/landing.css?raw";
+import { createFileRoute, Link } from '@tanstack/react-router';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { SiteNav, Footer, GameLogo, BookingButton, DemoButton, TrustPanels, Integration } from '@/components/studio/shared';
+import { Rink } from '@/components/studio/rink';
+import { pageHead } from '@/lib/studio';
+import studioImage from '@/assets/studio-phase.jpg';
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Backcourt for operators — The basketball game your players come back to" },
-      {
-        name: "description",
-        content:
-          "Backcourt is a basketball manager game with live betting built in. A new casino game category built for retention: matches in minutes, four betting windows, and daily, weekly and season loops that bring players back.",
-      },
-      { property: "og:title", content: "Backcourt for operators" },
-      {
-        property: "og:description",
-        content: "Backcourt is a basketball manager game with live betting built in. A new casino game category built for retention: matches in minutes, four betting windows, and daily, weekly and season loops that bring players back.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://backcourt.fyi/" },
-      { property: "og:image", content: "https://backcourt.fyi/og-image.jpg" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Backcourt for operators" },
-      { name: "twitter:description", content: "Backcourt is a basketball manager game with live betting built in. A new casino game category built for retention: matches in minutes, four betting windows, and daily, weekly and season loops that bring players back." },
-      { name: "twitter:image", content: "https://backcourt.fyi/og-image.jpg" },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "VideoGame",
-          name: "Backcourt Manager",
-          description: "Real-money basketball management game with live quarter-by-quarter betting for licensed casinos and sportsbooks.",
-          url: "https://backcourt.fyi/",
-          image: "https://backcourt.fyi/og-image.jpg",
-          genre: ["Sports", "Management"],
-        }),
-      },
-    ],
-    links: [
-      { rel: "canonical", href: "https://backcourt.fyi/" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Bungee&family=DM+Mono:wght@400;500&family=Rubik:wght@400;500;700;800&display=swap",
-      },
-    ],
-  }),
-  component: Index,
+export const Route = createFileRoute('/')({
+  head: () => pageHead('/', 'Noclip Gaming | Retention gaming studio', 'Noclip Gaming makes real-money sports manager games for casinos and sportsbooks. Discover Backcourt and Backcheck: one engine, lasting player retention.'),
+  component: StudioHome,
 });
-
-function Index() {
-  return (
-    <>
-      <style dangerouslySetInnerHTML={{ __html: landingCss }} />
-      <div
-        dangerouslySetInnerHTML={{ __html: landingHtml }}
-        onSubmit={(e) => e.preventDefault()}
-      />
-    </>
-  );
+function StudioHome() {
+  return <div className="studio"><SiteNav/><main>
+    <section className="studio-hero"><img src={studioImage} width={1600} height={912} alt="A metallic form passing through an illuminated architectural wall" className="studio-hero-image"/><div className="studio-wrap hero-content"><span className="section-kicker">Independent retention gaming studio</span><h1>Noclip Gaming</h1><h2>Built for the comeback.</h2><p>We make real-money sports manager games for casinos and sportsbooks that players come back to on day 30, not just day 1.</p><div className="actions"><BookingButton/><Button asChild variant="ghost" className="action action-light"><Link to="/" hash="games">See our games <ArrowRight/></Link></Button></div><div className="hero-footnote"><span>SPORTS MANAGEMENT</span><span>LIVE BETTING</span><span>LASTING PROGRESSION</span></div></div></section>
+    <section id="games" className="studio-section studio-wrap games-section"><div className="section-heading heading-inline"><div><span className="section-kicker">Our games</span><h2>Two sports.<br/>One reason to return.</h2></div><p>Real decisions. Live betting. A team that is still yours tomorrow.</p></div><div className="game-title-grid">
+      <article className="game-title-card backcourt"><div className="title-card-top"><GameLogo game="backcourt"/><span className="status-badge">Live demo</span></div><h3>The basketball game your players come back to.</h3><div className="basketball-card-visual"><div className="court-markings"/><img src="/bc/plan.webp" width={640} height={1376} alt="Backcourt game plan screen" loading="lazy"/><img src="/bc/live.webp" width={640} height={1376} alt="Backcourt live basketball match" loading="lazy"/></div><p>Build a squad. Call the plays. Bet at every quarter break. Matches last 2 to 5 minutes, with a whole season beyond the buzzer.</p><div className="card-actions"><DemoButton game="backcourt"/><Button asChild variant="ghost" className="action explore"><Link to="/backcourt">Explore Backcourt <ArrowUpRight/></Link></Button></div></article>
+      <article className="game-title-card backcheck"><div className="title-card-top"><GameLogo game="backcheck"/><span className="status-badge">New · Live demo</span></div><h3>The hockey game with a reason to come back every night.</h3><div className="hockey-card-visual"><Rink/></div><p>Build your lines. Set the game plan. Bet before puck drop and at every intermission. Power plays, overtime and shootouts keep it hockey.</p><div className="card-actions"><DemoButton game="backcheck"/><Button asChild variant="ghost" className="action explore"><Link to="/backcheck">Explore Backcheck <ArrowUpRight/></Link></Button></div></article>
+    </div></section>
+    <section id="retention" className="studio-band"><div className="studio-wrap studio-section"><div className="section-heading"><span className="section-kicker">Why retention</span><h2>Not a slot. Not a sportsbook.<br/>A new shelf in your lobby.</h2><p>The match brings them in. What carries over brings them back. A squad, a collection and a season give every visit a purpose, without spending your bonus budget.</p></div><div className="studio-loops">{[['01','Match','A result. A reward. One more change to the team.'],['02','Daily','A streak to keep, a pack to open, a squad to improve.'],['03','Weekly','Rivalries, divisions and the push for promotion.'],['04','Season','A pass to progress and a collection to make your own.']].map(([n,t,p])=><article key={t}><span>{n} /</span><h3>{t}</h3><p>{p}</p></article>)}</div><div className="retention-statement"><h3>A losing session still<br/>leaves something behind.</h3><p>The collection grows. Progress stays. The next goal is visible. A reason to return that has nothing to do with chasing losses.<br/><strong>Engagement you don’t pay for twice.</strong></p></div></div></section>
+    <section className="studio-section studio-wrap"><div className="section-heading heading-inline"><div><span className="section-kicker">One engine, every sport</span><h2>New titles.<br/>Not new integrations.</h2></div><p>Collection, packs, albums, divisions, season pass, store, wallet, pricing and settlement share one sport-agnostic core.</p></div><div className="sport-roadmap"><Link to="/backcourt"><span>01</span><h3>Basketball</h3><p>Backcourt</p><b>Live demo <ArrowUpRight/></b></Link><Link to="/backcheck"><span>02</span><h3>Ice hockey</h3><p>Backcheck</p><b>Live demo <ArrowUpRight/></b></Link><div><span>03</span><h3>Football</h3><p>The next field of play</p><b className="planned">Planned</b></div><div><span>04</span><h3>More sports</h3><p>Shaped by operator demand</p><b className="planned">Let’s talk</b></div></div><p className="integration-note">One integration. A growing portfolio. New titles arrive without a new integration.</p></section>
+    <div className="studio-band"><Integration/></div>
+    <section id="trust" className="studio-section studio-wrap"><div className="section-heading"><span className="section-kicker">Trust</span><h2>Fair maths.<br/>Responsible by design.</h2><p>Real-money games need more than a compelling loop. Transparent maths and player-first controls are part of the engine, not an afterthought.</p></div><TrustPanels/></section>
+    <section className="studio-final"><div className="studio-wrap"><span className="section-kicker">Let’s build your next regulars</span><h2>Give them a game<br/>worth coming back to.</h2><div className="actions"><BookingButton/><a href="https://basketball-demo.backcourt.fyi/" target="_blank" rel="noopener">Play Backcourt <ArrowUpRight/></a><a href="https://noclip-gaming.vercel.app/backcheck/" target="_blank" rel="noopener">Play Backcheck <ArrowUpRight/></a></div></div></section>
+  </main><Footer/></div>;
 }
