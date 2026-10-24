@@ -12,4 +12,4 @@
 - Game demos remain external; shared studio links use src/lib/studio.ts while the unchanged legacy /play redirects target Backcourt, so no game bundle is shipped.
 - Keep the supplied landing page as raw HTML/CSS, with the demo panel using a two-column grid; this preserves the imported page while preventing desktop wrapping.
 
-- Keep studio and Backcheck React pages on shared branding/rink components with palettes in global CSS; preserve Backcourt as imported raw HTML/CSS to maintain its existing product presentation.
+- All three pages (/, /backcourt, /backcheck) are raw HTML/CSS content files under src/content rendered via ?raw imports in their routes; they share the same .bc visual system, with backcheck.css adding an ice-palette override. This keeps the imported pages byte-stable and free of React rewrite drift.
