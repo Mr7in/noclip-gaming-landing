@@ -249,3 +249,6 @@
 .bc.ice .league .nums b{font-family:var(--f-num);font-weight:400;font-size:clamp(56px,7vw,88px);line-height:1;color:var(--led);text-shadow:0 0 24px rgba(126,203,255,.3);display:block}
 .bc.ice .league .nums span{font-size:13px;color:var(--body)}
 @media (max-width:760px){.bc.ice .league{grid-template-columns:1fr}}
+.bc.ice header{background:rgba(15,26,38,.9)}
+.bc.ice .phone{background:linear-gradient(160deg,#2c4258,#0a141d)}
+.bc.ice .phone img{background:#0a141d}
