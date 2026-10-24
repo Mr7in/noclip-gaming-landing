@@ -227,3 +227,25 @@
 .bc .final .lnk{color:var(--ballink);font-weight:800;text-decoration:underline;text-underline-offset:4px}
 .bc footer{border-top:1px solid var(--seam)}
 .bc .foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px;padding-block:32px;font-size:13px;color:var(--dim)}
+
+/* ============ Backcheck ice palette on the shared visual system ============ */
+.bc.ice{--oak:#0f1a26;--locker:#152434;--locker2:#1b2d40;--seam:#2c4258;--ink:#0a141d;--maple:#d9e7f2;--ball:#e0303c;--ballink:#ffffff;--chalk:#f2f8fc;--body:#d5e2ec;--dim:#8fa6b8;--led:#7ecbff;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.02) 0 2px,transparent 2px 46px),radial-gradient(ellipse at 50% -8%,rgba(126,203,255,.16),transparent 55%)}
+.bc.ice .btn{background:linear-gradient(180deg,#f05660,var(--ball));box-shadow:0 5px 0 #8c1420,0 14px 30px rgba(224,48,60,.25)}
+.bc.ice .btn:active{box-shadow:0 1px 0 #8c1420}
+.bc.ice .navlinks .btn{box-shadow:0 4px 0 #8c1420;color:#fff}
+.bc.ice .stat b{text-shadow:0 0 16px rgba(126,203,255,.3)}
+.bc.ice .zero{text-shadow:0 0 30px rgba(126,203,255,.3)}
+.bc.ice .col.hot{background:linear-gradient(180deg,rgba(224,48,60,.14),rgba(15,26,38,1) 60%)}
+.bc.ice .card .ic{background:rgba(224,48,60,.14)}
+.bc.ice .glow{background:radial-gradient(closest-side,rgba(126,203,255,.3),transparent)}
+.bc.ice .final{background:var(--ball);color:#fff}
+.bc.ice .final .btn{background:var(--oak);color:var(--led);box-shadow:0 5px 0 #000}
+.bc.ice .final .lnk{color:#fff}
+.bc.ice .demo{color:#0f1a26}
+.bc.ice .demo .btn{background:var(--oak);color:var(--led);box-shadow:0 5px 0 #000}
+.bc.ice .league{background:var(--ink);border:1px solid var(--seam);border-radius:22px;padding:clamp(26px,4vw,48px);display:grid;grid-template-columns:1fr auto;gap:clamp(24px,4vw,56px);align-items:center}
+.bc.ice .league .nums{display:flex;gap:clamp(28px,5vw,64px)}
+.bc.ice .league .nums b{font-family:var(--f-num);font-weight:400;font-size:clamp(56px,7vw,88px);line-height:1;color:var(--led);text-shadow:0 0 24px rgba(126,203,255,.3);display:block}
+.bc.ice .league .nums span{font-size:13px;color:var(--body)}
+@media (max-width:760px){.bc.ice .league{grid-template-columns:1fr}}
