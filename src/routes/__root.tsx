@@ -78,9 +78,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "theme-color", content: "#1b130e" },
+      { name: "theme-color", content: "#202824" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Backcourt" },
+      { property: "og:site_name", content: "Noclip Gaming" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

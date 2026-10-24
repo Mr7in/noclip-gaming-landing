@@ -10,11 +10,23 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BackcheckRouteImport } from './routes/backcheck'
+import { Route as BackcourtRouteImport } from './routes/backcourt'
 import { Route as PlayRouteImport } from './routes/play'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BackcheckRoute = BackcheckRouteImport.update({
+  id: '/backcheck',
+  path: '/backcheck',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BackcourtRoute = BackcourtRouteImport.update({
+  id: '/backcourt',
+  path: '/backcourt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlayRoute = PlayRouteImport.update({
@@ -25,27 +37,35 @@ const PlayRoute = PlayRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/backcheck': typeof BackcheckRoute
+  '/backcourt': typeof BackcourtRoute
   '/play': typeof PlayRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/backcheck': typeof BackcheckRoute
+  '/backcourt': typeof BackcourtRoute
   '/play': typeof PlayRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/backcheck': typeof BackcheckRoute
+  '/backcourt': typeof BackcourtRoute
   '/play': typeof PlayRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/play'
+  fullPaths: '/' | '/backcheck' | '/backcourt' | '/play'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/play'
-  id: '__root__' | '/' | '/play'
+  to: '/' | '/backcheck' | '/backcourt' | '/play'
+  id: '__root__' | '/' | '/backcheck' | '/backcourt' | '/play'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BackcheckRoute: typeof BackcheckRoute
+  BackcourtRoute: typeof BackcourtRoute
   PlayRoute: typeof PlayRoute
 }
 
@@ -56,6 +76,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/backcheck': {
+      id: '/backcheck'
+      path: '/backcheck'
+      fullPath: '/backcheck'
+      preLoaderRoute: typeof BackcheckRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/backcourt': {
+      id: '/backcourt'
+      path: '/backcourt'
+      fullPath: '/backcourt'
+      preLoaderRoute: typeof BackcourtRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/play': {
@@ -70,6 +104,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BackcheckRoute: BackcheckRoute,
+  BackcourtRoute: BackcourtRoute,
   PlayRoute: PlayRoute,
 }
 export const routeTree = rootRouteImport

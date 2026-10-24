@@ -9,5 +9,7 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- The playable demo is hosted outside this repo (URL in `src/routes/play.tsx`) — never copy a game bundle back in; every "Play the demo" link opens that hosted app in a new tab, and old `/play` addresses only ever redirect there (the `/play` route serves the pretty URLs, the `src/server.ts` worker entry serves the old static file path).
+- Game demos remain external; shared studio links use src/lib/studio.ts while the unchanged legacy /play redirects target Backcourt, so no game bundle is shipped.
 - Keep the supplied landing page as raw HTML/CSS, with the demo panel using a two-column grid; this preserves the imported page while preventing desktop wrapping.
+
+- Keep studio and Backcheck React pages on shared branding/rink components with palettes in global CSS; preserve Backcourt as imported raw HTML/CSS to maintain its existing product presentation.
