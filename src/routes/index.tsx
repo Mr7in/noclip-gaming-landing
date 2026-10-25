@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
 import studioHtml from "@/content/studio.html?raw";
 import studioCss from "@/content/studio.css?raw";
 
@@ -41,10 +42,64 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const content = contentRef.current;
+    if (!content) return;
+    const disclosures = () =>
+      Array.from(content.querySelectorAll<HTMLDetailsElement>(".mobilenav, .playdd"));
+    const close = (restoreFocus = false) => {
+      for (const disclosure of disclosures()) {
+        if (!disclosure.open) continue;
+        disclosure.open = false;
+        if (restoreFocus) disclosure.querySelector("summary")?.focus();
+      }
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") close(true);
+    };
+    const onClick = (event: MouseEvent) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const anchor = target.closest<HTMLAnchorElement>("a");
+      if (anchor?.closest(".mobilenav, .playdd")) {
+        close();
+        if (anchor.hash) {
+          const section = content.querySelector<HTMLElement>(anchor.hash);
+          section?.setAttribute("tabindex", "-1");
+          section?.focus({ preventScroll: true });
+        }
+      } else if (!target.closest(".mobilenav, .playdd")) {
+        close();
+      }
+    };
+    const onToggle = (event: Event) => {
+      const opened = event.target;
+      if (!(opened instanceof HTMLDetailsElement) || !opened.open ||
+          !opened.matches(".mobilenav, .playdd")) return;
+      for (const disclosure of disclosures()) {
+        if (disclosure !== opened) disclosure.open = false;
+      }
+    };
+    const onResize = () => close();
+    document.addEventListener("keydown", onKeyDown);
+    document.addEventListener("click", onClick);
+    content.addEventListener("toggle", onToggle, true);
+    window.addEventListener("resize", onResize);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("click", onClick);
+      content.removeEventListener("toggle", onToggle, true);
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
+
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: studioCss }} />
       <div
+        ref={contentRef}
         dangerouslySetInnerHTML={{ __html: studioHtml }}
         onSubmit={(e) => e.preventDefault()}
       />
