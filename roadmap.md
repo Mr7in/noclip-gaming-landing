@@ -7,5 +7,5 @@
 
 # Studio polish, preview only
 - [x] Inspect the current studio page at 320, 390, 768 and 1440px.
-- [ ] Refine navigation, keyboard access, typography and narrow-screen layouts without changing factual copy or destinations.
-- [ ] Verify screenshots, menu/demo/FAQ/anchor interactions, external CTAs and existing tests; do not publish.
+- [x] Refine navigation, keyboard access, typography and narrow-screen layouts without changing factual copy or destinations.
+- [x] Verify screenshots, menu/demo/FAQ/anchor interactions, external CTAs and existing tests; do not publish.
