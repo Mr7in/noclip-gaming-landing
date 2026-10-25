@@ -305,6 +305,10 @@
 
 /* Focused studio polish. No rules here apply to either game page. */
 .bc.studio{--focus:var(--led);--scroll-track:var(--ink);--scroll-thumb:var(--maple)}
+html:has(.bc.studio){--scroll-track:#120c08;--scroll-thumb:#d9a066;scrollbar-color:var(--scroll-thumb) var(--scroll-track);scrollbar-width:thin}
+html:has(.bc.studio)::-webkit-scrollbar{width:10px}
+html:has(.bc.studio)::-webkit-scrollbar-track{background:var(--scroll-track)}
+html:has(.bc.studio)::-webkit-scrollbar-thumb{background:var(--scroll-thumb);border:2px solid var(--scroll-track);border-radius:8px}
 .bc.studio :is(a,summary,[tabindex]):focus-visible{outline:3px solid var(--focus);outline-offset:4px}
 .bc.studio :is(.demo,.final){--focus:var(--ballink)}
 .bc.studio .skip-link{position:fixed;top:12px;left:20px;z-index:60;transform:translateY(-160%);padding:12px 18px;min-height:44px;background:var(--chalk);color:var(--ballink);font-weight:700;border-radius:8px}
@@ -344,7 +348,7 @@
 .bc.studio .faq details p{margin:0;padding:0 20px 22px;line-height:1.65}
 .bc.studio .faq summary:focus-visible{outline-offset:-4px;border-radius:14px}
 .bc.studio .demo .qrs{align-self:center}
-.bc.studio .qr :is(svg,img){width:100%;max-width:170px;height:auto;aspect-ratio:1}
+.bc.studio .qr :is(svg,img){display:block;width:100%;max-width:170px;height:auto;aspect-ratio:1;flex-shrink:0}
 .bc.studio .qr span{line-height:1.5}
 .bc.studio .final .lnk{display:inline-flex;align-items:center;min-height:44px}
 .bc.studio .foot>div{flex-wrap:wrap;min-width:0}
@@ -359,8 +363,8 @@
 .bc.studio .navlinks .btn{min-height:44px}
 .bc.studio .mobilenav{display:none}
 @media(max-width:1100px){
- .bc.studio section{scroll-margin-top:140px}
- .bc.studio .navrow{grid-template-columns:minmax(0,1fr) auto;gap:8px 12px}
+ .bc.studio section{scroll-margin-top:88px}
+ .bc.studio .navrow{grid-template-columns:minmax(0,1fr) auto auto;gap:12px}
  .bc.studio .mobilenav{display:block}
  .bc.studio .mobilenav summary{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:44px;padding:8px 10px;border:1px solid var(--seam);border-radius:8px;cursor:pointer;list-style:none;font-weight:700;color:var(--chalk)}
  .bc.studio .mobilenav summary::-webkit-details-marker{display:none}
@@ -371,10 +375,11 @@
  .bc.studio .mobilenav[open] .menu-icon{border:0;height:18px}
  .bc.studio .mobilenav[open] .menu-icon::before,.bc.studio .mobilenav[open] .menu-icon::after{content:"";position:absolute;top:8px;left:0;right:0;border-top:2px solid currentColor;transform:rotate(45deg)}
  .bc.studio .mobilenav[open] .menu-icon::after{transform:rotate(-45deg)}
- .bc.studio .mobilenav nav{position:absolute;top:100%;left:0;right:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;padding:16px 20px;background:var(--oak);border-bottom:1px solid var(--seam);max-height:calc(100dvh - 124px);overflow-y:auto;box-shadow:0 16px 24px color-mix(in srgb,var(--ink) 60%,transparent)}
+ .bc.studio .mobilenav nav{position:absolute;top:100%;left:0;right:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;padding:16px 20px;background:var(--oak);border-bottom:1px solid var(--seam);max-height:calc(100dvh - 72px);overflow-y:auto;box-shadow:0 16px 24px color-mix(in srgb,var(--ink) 60%,transparent)}
  .bc.studio .mobilenav nav a{display:flex;align-items:center;min-height:44px;padding:10px 12px;text-decoration:none;color:var(--chalk);border-radius:8px;line-height:1.4}
  .bc.studio .mobilenav nav a:hover{background:var(--locker2)}
- .bc.studio .navlinks{grid-column:1/-1;justify-content:flex-end;gap:16px}
+ .bc.studio .navlinks{justify-content:flex-end;gap:16px}
+ .bc.studio .mobilenav .menu-booking{display:none}
  .bc.studio .navlinks .sec{display:none}
  .bc.studio .hero h1{font-size:56px}
  .bc.studio .h2{font-size:42px}
@@ -396,6 +401,9 @@
  .bc.studio .hero .ctas .btn{justify-self:stretch}
  .bc.studio .hero .btn2{padding:12px 8px;font-size:14px}
  .bc.studio .navlinks .playdd{display:none}
+ .bc.studio .navlinks{display:none}
+ .bc.studio .navrow{grid-template-columns:minmax(0,1fr) auto}
+ .bc.studio .mobilenav .menu-booking{display:flex;grid-column:1/-1;justify-content:center;color:var(--ballink);margin-top:8px}
  .bc.studio .navlinks .btn{font-size:13px;padding:9px 16px;min-height:44px}
  .bc.studio .logo span{font-size:17px}
  .bc.studio .navrow{padding-block:10px}
