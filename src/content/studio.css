@@ -359,6 +359,7 @@
 .bc.studio .navlinks .btn{min-height:44px}
 .bc.studio .mobilenav{display:none}
 @media(max-width:1100px){
+ .bc.studio section{scroll-margin-top:140px}
  .bc.studio .navrow{grid-template-columns:minmax(0,1fr) auto;gap:8px 12px}
  .bc.studio .mobilenav{display:block}
  .bc.studio .mobilenav summary{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:44px;padding:8px 10px;border:1px solid var(--seam);border-radius:8px;cursor:pointer;list-style:none;font-weight:700;color:var(--chalk)}
