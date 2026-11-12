@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://backcourt.fyi/sitemap.xml
+Sitemap: https://noclipgaming.space/sitemap.xml
