@@ -35,6 +35,13 @@ Pushing to `main` runs `.github/workflows/deploy.yml`: install, lint, test, buil
 
 Game screens are real captures from the demos, never mockups:
 
-- `public/fc/`: Fullcourt (https://fullcourt-demo.noclipgaming.space), re-captured with `scripts/capture-fullcourt.ts`
+- `public/fc/`: Fullcourt (https://fullcourt-demo.noclipgaming.space). Re-capture after a game update:
+  ```sh
+  bun scripts/capture-fullcourt.ts          # PNG masters in design/captures/ (not committed)
+  bun scripts/export-captures.ts            # WebP files in public/fc/ and og-image.jpg
+  ```
+  The capture script plays fresh demo-funds sessions in Chrome at 390 x 844 (scale 3) and 1440 x 900. The hero frame is picked by eye from `design/captures/burst/desk-*.png` and copied to `design/captures/court-hero.png`. A smooth hero video needs a machine with a real GPU; headless software rendering plays in slow motion.
 - `public/bc/`: Backcourt, used on `/backcourt`
 - `public/bh/`: Backcheck (https://backcheck-demo.noclipgaming.space)
+
+QR codes for the demos are static SVGs in `public/qr/`, made with `bun scripts/make-qr.ts`. Logo files in `public/brand/` come from the Fullcourt game (`apps/clutch/public/brand/`); never recolour them.
