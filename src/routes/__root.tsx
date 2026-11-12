@@ -10,7 +10,7 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
-import appCss from "../styles.css?url";
+import appCss from "../styles.css?inline";
 
 export function NotFoundComponent() {
   return (
@@ -76,16 +76,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#1b130e" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Noclip Gaming" },
+      { property: "og:site_name", content: "noclip gaming" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-    ],
+    links: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -97,6 +91,7 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <style dangerouslySetInnerHTML={{ __html: appCss }} />
         <HeadContent />
       </head>
       <body>
