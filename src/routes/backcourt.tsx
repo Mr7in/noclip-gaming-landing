@@ -14,17 +14,22 @@ export const Route = createFileRoute("/backcourt")({
       { property: "og:title", content: "Backcourt for operators" },
       {
         property: "og:description",
-        content: "Backcourt is a basketball manager game with live betting built in. A new casino game category built for retention: matches in minutes, four betting windows, and daily, weekly and season loops that bring players back.",
+        content:
+          "Backcourt is a basketball manager game with live betting built in. A new casino game category built for retention: matches in minutes, four betting windows, and daily, weekly and season loops that bring players back.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://backcourt.fyi/backcourt" },
-      { property: "og:image", content: "https://backcourt.fyi/og-image.jpg" },
+      { property: "og:url", content: "https://noclipgaming.space/backcourt" },
+      { property: "og:image", content: "https://noclipgaming.space/og-image.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Backcourt for operators" },
-      { name: "twitter:description", content: "Backcourt is a basketball manager game with live betting built in. A new casino game category built for retention: matches in minutes, four betting windows, and daily, weekly and season loops that bring players back." },
-      { name: "twitter:image", content: "https://backcourt.fyi/og-image.jpg" },
+      {
+        name: "twitter:description",
+        content:
+          "Backcourt is a basketball manager game with live betting built in. A new casino game category built for retention: matches in minutes, four betting windows, and daily, weekly and season loops that bring players back.",
+      },
+      { name: "twitter:image", content: "https://noclipgaming.space/og-image.jpg" },
     ],
     scripts: [
       {
@@ -33,15 +38,16 @@ export const Route = createFileRoute("/backcourt")({
           "@context": "https://schema.org",
           "@type": "VideoGame",
           name: "Backcourt Manager",
-          description: "Real-money basketball management game with live quarter-by-quarter betting for licensed casinos and sportsbooks.",
-          url: "https://backcourt.fyi/backcourt",
-          image: "https://backcourt.fyi/og-image.jpg",
+          description:
+            "Real-money basketball management game with live quarter-by-quarter betting for licensed casinos and sportsbooks.",
+          url: "https://noclipgaming.space/backcourt",
+          image: "https://noclipgaming.space/og-image.jpg",
           genre: ["Sports", "Management"],
         }),
       },
     ],
     links: [
-      { rel: "canonical", href: "https://backcourt.fyi/backcourt" },
+      { rel: "canonical", href: "https://noclipgaming.space/backcourt" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -57,10 +63,7 @@ function Index() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: landingCss }} />
-      <div
-        dangerouslySetInnerHTML={{ __html: landingHtml }}
-        onSubmit={(e) => e.preventDefault()}
-      />
+      <div dangerouslySetInnerHTML={{ __html: landingHtml }} onSubmit={(e) => e.preventDefault()} />
     </>
   );
 }

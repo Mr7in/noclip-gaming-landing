@@ -19,17 +19,21 @@ export const Route = createFileRoute("/")({
           "Noclip Gaming is a retention gaming studio for casinos and sportsbooks. One engine for sports manager games with live betting built in: basketball and hockey are live, and every new sport is a skin, not a new integration.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://backcourt.fyi/" },
-      { property: "og:image", content: "https://backcourt.fyi/og-image.jpg" },
+      { property: "og:url", content: "https://noclipgaming.space/" },
+      { property: "og:image", content: "https://noclipgaming.space/og-image.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Noclip Gaming | Retention gaming studio" },
-      { name: "twitter:description", content: "Noclip Gaming is a retention gaming studio for casinos and sportsbooks. One engine for sports manager games with live betting built in: basketball and hockey are live, and every new sport is a skin, not a new integration." },
-      { name: "twitter:image", content: "https://backcourt.fyi/og-image.jpg" },
+      {
+        name: "twitter:description",
+        content:
+          "Noclip Gaming is a retention gaming studio for casinos and sportsbooks. One engine for sports manager games with live betting built in: basketball and hockey are live, and every new sport is a skin, not a new integration.",
+      },
+      { name: "twitter:image", content: "https://noclipgaming.space/og-image.jpg" },
     ],
     links: [
-      { rel: "canonical", href: "https://backcourt.fyi/" },
+      { rel: "canonical", href: "https://noclipgaming.space/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -76,8 +80,12 @@ function Index() {
     };
     const onToggle = (event: Event) => {
       const opened = event.target;
-      if (!(opened instanceof HTMLDetailsElement) || !opened.open ||
-          !opened.matches(".mobilenav, .playdd")) return;
+      if (
+        !(opened instanceof HTMLDetailsElement) ||
+        !opened.open ||
+        !opened.matches(".mobilenav, .playdd")
+      )
+        return;
       for (const disclosure of disclosures()) {
         if (disclosure !== opened) disclosure.open = false;
       }

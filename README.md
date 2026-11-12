@@ -1,26 +1,40 @@
-# Noclip Gaming
+# noclip gaming landing
 
-build this page
+The operator site for noclip gaming at https://noclipgaming.space. It sells the studio's sports manager games (basketball and hockey, with live betting built in) to casinos and sportsbooks.
 
-This project was built with [Lovable](https://lovable.dev).
+## Stack
 
-**Live app**: https://noclip-gaming.lovable.app
+TanStack Start (React 19), Vite, Tailwind v4, Vitest, Bun. Every route is prerendered to static HTML at build time and served by GitHub Pages.
 
-## Build with Lovable
+| Route | Source |
+|---|---|
+| `/` | `src/routes/index.tsx` renders `src/content/studio.html` + `studio.css` |
+| `/backcourt` | `src/content/landing.html` + `landing.css` |
+| `/backcheck` | `src/content/backcheck.html` + `backcheck.css` |
+| `/404` | copied to `404.html` after the build |
+| `/play` | static redirect page in `public/play/index.html` |
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/1b9b5551-c808-4aad-ba14-82a7cd8966ed).
+Page copy lives in the HTML files under `src/content`, not in components.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Work on it
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+bun install
+bun dev            # local dev server
+bun run lint
+bun run test
+bun run build      # static site in dist/client
+bun run preview    # serve the build locally
 ```
+
+## Deploy
+
+Pushing to `main` runs `.github/workflows/deploy.yml`: install, lint, test, build, then publish `dist/client` to GitHub Pages. Pull requests run the same checks without deploying (`.github/workflows/ci.yml`). The custom domain comes from `public/CNAME`.
+
+## Screenshots
+
+Game screens are real captures from the demos, never mockups:
+
+- `public/fc/`: Fullcourt (https://fullcourt-demo.noclipgaming.space), re-captured with `scripts/capture-fullcourt.ts`
+- `public/bc/`: Backcourt, used on `/backcourt`
+- `public/bh/`: Backcheck (https://backcheck-demo.noclipgaming.space)

@@ -18,17 +18,21 @@ export const Route = createFileRoute("/backcheck")({
           "Backcheck is an ice hockey manager game with live betting built in. Players build their lines, set the game plan and bet before puck drop and at every intermission, in a fictional league of 32 clubs and 288 players.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://backcourt.fyi/backcheck" },
-      { property: "og:image", content: "https://backcourt.fyi/og-image.jpg" },
+      { property: "og:url", content: "https://noclipgaming.space/backcheck" },
+      { property: "og:image", content: "https://noclipgaming.space/og-image.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Backcheck for operators" },
-      { name: "twitter:description", content: "Backcheck is an ice hockey manager game with live betting built in. Players build their lines, set the game plan and bet before puck drop and at every intermission, in a fictional league of 32 clubs and 288 players." },
-      { name: "twitter:image", content: "https://backcourt.fyi/og-image.jpg" },
+      {
+        name: "twitter:description",
+        content:
+          "Backcheck is an ice hockey manager game with live betting built in. Players build their lines, set the game plan and bet before puck drop and at every intermission, in a fictional league of 32 clubs and 288 players.",
+      },
+      { name: "twitter:image", content: "https://noclipgaming.space/og-image.jpg" },
     ],
     links: [
-      { rel: "canonical", href: "https://backcourt.fyi/backcheck" },
+      { rel: "canonical", href: "https://noclipgaming.space/backcheck" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
