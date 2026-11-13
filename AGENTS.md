@@ -1,6 +1,6 @@
 # Notes for agents
 
-- The site is static. Every route must prerender; no server functions, API routes or runtime redirects (GitHub Pages can't run them).
+- The site is static. Every route must prerender; no server functions or API routes. Redirects and headers go in `vercel.json`.
 - Pages are raw HTML and CSS under `src/content`, rendered through `?raw` imports in their routes. Edit copy there.
 - Game demos are external. Shared links live in `src/lib/studio.ts`.
 - Game visuals are real captures only. No mockups, AI images or stock.
