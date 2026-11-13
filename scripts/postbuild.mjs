@@ -1,4 +1,4 @@
-// GitHub Pages serves 404.html for unknown paths. Copy the prerendered /404 page there.
+// Static hosts (Vercel) serve 404.html for unknown paths. Copy the prerendered /404 page there.
 import { copyFileSync, existsSync } from "node:fs";
 
 const out = "dist/client";

@@ -4,7 +4,7 @@ The operator site for noclip gaming at https://noclipgaming.space. It sells the 
 
 ## Stack
 
-TanStack Start (React 19), Vite, Tailwind v4, Vitest, Bun. Every route is prerendered to static HTML at build time and served by GitHub Pages.
+TanStack Start (React 19), Vite, Tailwind v4, Vitest, Bun. Every route is prerendered to static HTML at build time and served by Vercel (project `noclip-gaming-landing` in the `noclip-vercel` team).
 
 | Route | Source |
 |---|---|
@@ -12,7 +12,7 @@ TanStack Start (React 19), Vite, Tailwind v4, Vitest, Bun. Every route is preren
 | `/backcourt` | `src/content/landing.html` + `landing.css` |
 | `/backcheck` | `src/content/backcheck.html` + `backcheck.css` |
 | `/404` | copied to `404.html` after the build |
-| `/play` | static redirect page in `public/play/index.html` |
+| `/play` | redirect to the Fullcourt demo in `vercel.json` |
 
 Page copy lives in the HTML files under `src/content`, not in components.
 
@@ -29,7 +29,7 @@ bun run preview    # serve the build locally
 
 ## Deploy
 
-Pushing to `main` runs `.github/workflows/deploy.yml`: install, lint, test, build, then publish `dist/client` to GitHub Pages. Pull requests run the same checks without deploying (`.github/workflows/ci.yml`). The custom domain comes from `public/CNAME`.
+Vercel builds every push: `main` goes to production at https://noclipgaming.space, other branches and pull requests get preview links. Build settings: install `bun install --frozen-lockfile`, build `bun run build`, output `dist/client`. Redirects and response headers live in `vercel.json`. Pull requests also run lint, test and build in GitHub Actions (`.github/workflows/ci.yml`).
 
 ## Screenshots
 
